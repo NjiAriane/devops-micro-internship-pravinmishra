@@ -33,7 +33,7 @@ You will reuse this in later weeks. So do it properly once.
 
 ## Answer
 
-Add your answer here...
+test
 
 ---
 
@@ -199,7 +199,10 @@ Choose books that improve:
 
 ## Book List
 
-1. Add your answer here...
+1. Atomic Habits
+
+![Assignment 5 Screenshot](screenshots/week-01-screenshot-01.png)
+
 2. Add your answer here...
 3. Add your answer here...
 4. Add your answer here...
