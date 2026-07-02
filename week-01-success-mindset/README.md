@@ -35,6 +35,7 @@ You will reuse this in later weeks. So do it properly once.
 
 Add your answer here...
 
+I believe there are smarter ways to make money than the traditional path most people follow. Many people around me think success only comes from working long hours for many years, but I believe leverage, skills, and systems can help someone earn more with less physical effort. This does not mean avoiding hard work. It means putting in deep effort at the beginning making sacrifices, learning valuable skills, experimenting, and figuring things out. Once those systems are built, they can keep producing results. I believe smart work multiplied by discipline is more powerful than just hard work alone. Most people disagree because they see effort only in terms of time spent, but I think the real value is in solving problems efficiently and creating opportunities that can grow beyond your direct labor. 
 ---
 
 # Assignment 2. What are the top 3 objective truths you discovered through experimentation and results?
@@ -57,11 +58,13 @@ Write each truth in this format:
 
 Add your answer here...
 
+Consistency compounds faster than intensity.
+
 ### Evidence from my life
 
 Add your answer here...
 
----
+Whenever I studied English or practiced tech skills every day, even for one hour, I improved much faster than when I did long random sessions. Small daily effort gave me better results than occasional big effort---
 
 ## Truth #2
 
@@ -69,11 +72,13 @@ Add your answer here...
 
 Add your answer here...
 
+Clear communication creates more opportunities.
+
 ### Evidence from my life
 
 Add your answer here...
 
----
+As an online tutor, I noticed students understood me better and trusted me more when I explained things simply. Better communication helped me build stronger connections and improve my teaching confidence.---
 
 ## Truth #3
 
@@ -81,10 +86,12 @@ Add your answer here...
 
 Add your answer here...
 
+Avoiding hard things makes them harder.
+
 ### Evidence from my life
 
 Add your answer here...
-
+Whenever I delayed difficult tasks like technical assignments or important decisions, the stress increased. But once I started, the task often felt easier than I imagined.
 ---
 
 # Assignment 3. What does your 2.0 version look like?
@@ -136,12 +143,30 @@ Include this line:
 ## Your Article
 
 Add your answer here...
+What My Version 2.0 Looks Like
+
+The Rise of a DevOps Leader: A Story of Growth, Impact, and Legacy
+
+Five years ago, Nji Ariane was just a girl trying to figure herself out. She took on odd jobs teaching online, baking, importing and selling locally, and buying from suppliers to resell just to sustain herself while quietly building toward something she had always been passionate about: DevOps.
+Over the last seven years, Ariane has built an inspiring career in technology and established herself as a respected Senior DevOps Engineer. Through consistency, resilience, and discipline, she developed a strong foundation that transformed her life and positively impacted those around her. She built a comfortable home for her family and created a life they could be proud of.
+Ariane delivered multiple impactful projects and built a portfolio that attracted global opportunities. Her GitHub became a strong reflection of her journey, filled with automation scripts, cloud infrastructure projects, CI/CD pipelines, and container orchestration solutions.
+She led teams and collaborated with engineers across different organizations, strengthening her leadership skills through real-world experience. She became known for her strong troubleshooting abilities, consistently delivering effective solutions that keep systems running smoothly. She also has a natural talent for designing scalable systems and building efficient CI/CD pipelines that support business growth.
+She also published her personal blog and launched a mentorship platform for tech enthusiasts, TechIns&Outs, where mentors share inspirational stories, books, and lessons for inspired enthusiasts. The platform became a hub for learning, growth, and motivation.
+Her dedication to continuous learning earned her multiple certifications.
+Beyond tech, she contributed to society by mentoring young people and sharing her story to inspire others. She also documented her journey, challenges, and lessons in a personal book.
+Each time Ariane spoke about her journey, she made it clear that there were no shortcuts just consistency, discipline, and steady effort over time.
+But her journey did not stop in technology alone. 
+For those who wanted to experience her creativity beyond tech, 
+She launched her event studio, Dream Treats, a brand dedicated to cakes, event decoration, and full event setups. From custom cakes to elegant decorations, every creation carried her signature touch, making each celebration memorable.
+Her passion, consistency, and attention to detail made her one of the most sought-after cake artists and event decorators in her community,she created another stream of income and empowered others.
+Ariane became known not only as a Senior DevOps Engineer but also as a successful entrepreneur who balanced technology and creativity, building a legacy in both industries.
+P.S. This post is part of the DevOps Micro Internship with Agentic AI Cohort-3 by Pravin Mishra.
 
 ### Public Link
 
 Paste your link here:
 
-`__________________________`
+`https://www.linkedin.com/posts/nji-ariane-ruth-494805172_what-my-version-20-looks-like-the-rise-activity-7478572813419786241-9Paa?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo__________________________`
 
 ---
 
@@ -165,7 +190,7 @@ This is about self-awareness, not judgment.
 
 ### Answer Format
 
-**Yes / No**
+**Yes
 
 If Yes:
 
@@ -175,7 +200,7 @@ If Yes:
 
 Add your answer here...
 
----
+---i felt guilty and anxious,the anxiousness was me always worrying if they found out about my actions
 
 # Assignment 5. What are 10 non-fiction books you plan to read in the next 1 year?
 
@@ -197,20 +222,19 @@ Choose books that improve:
 * career
 * leadership
 
-## Book List
-
-1. Add your answer here...
-2. Add your answer here...
-3. Add your answer here...
-4. Add your answer here...
-5. Add your answer here...
-6. Add your answer here...
-7. Add your answer here...
-8. Add your answer here...
-9. Add your answer here...
-10. Add your answer here...
+## Book LIST
 
 ---
+1.Atomic Habits — James Clear
+2.Deep Work — Cal Newport
+3.The 7 Habits of Highly Effective People — Stephen R. Covey
+4.Mindset: The New Psychology of Success — Carol S. Dweck
+5.The Psychology of Money — Morgan Housel
+6.Rich Dad Poor Dad — Robert T. Kiyosaki
+7.Can't Hurt Me — David Goggins
+8.Start With Why — Simon Sinek
+9.Essentialism: The Disciplined Pursuit of Less — Greg McKeown
+10.Leaders Eat Last — Simon Sinek
 
 # Assignment 6. What are the things you will measure regularly in your life and career?
 
@@ -235,20 +259,18 @@ List topics only. No need to share numbers.
 * Sleep hours
 * Spending tracker
 
-## My Metrics
-
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-
----
+## My Metrics Learning hours per week (DevOps, cloud, and system design)
+1. Learning hours per week
+2. New skills or tools learned
+3. Projects built and deployed
+4. GitHub commits / portfolio updates
+5. Blog posts or technical content published
+6. Deep work sessions per week
+7. Sleep quality and sleep hours consistency
+8. Physical activity / workouts per week
+9. Daily screen time and focus tracking
+10.Income tracking and savings growth
+--
 
 # Assignment 7. Brain Dump + 5-Month System Plan
 
@@ -270,13 +292,10 @@ Examples:
 
 **Yes / No**
 
-Answer:
-
-Add your answer here...
-
+Answer: yes
 ---
 
-## Step 2: Your 5-Month Routine + Focus Blocks
+## Step 2: Your 5-Month Routine+ Focus Blocks
 
 Create a simple plan you can realistically follow for the next 5 months.
 
@@ -292,19 +311,30 @@ Example:
 
 Add your answer here...
 
+Mon–Fri: 60–90 min deep work (DevOps learning and hands-on practice)
+Mon–Wed: Structured learning (cloud, CI/CD, Kubernetes, Terraform)
+Thu–Fri: Project building and GitHub updates
+Saturday: DMI session and guided learning tasks
+Sunday: Weekly review, reflection, and planning for the new week
+Daily: Short practice or revision (30 min) when possible
+Daily: Track progress, notes, and key learnings
+Weekend: Rest, reset, and personal time management
 ---
 
 ### Focus Blocks
 
 #### When Will You Do DMI Work? (Days + Time)
 
-Add your answer here...
+Add your answer here..
+
+sundays..7pm
+wednesdays..7pm
 
 #### How Many Sessions Per Week?
 
 Add your answer here...
 
----
+---two
 
 ### Distraction Rules
 
@@ -318,6 +348,13 @@ Examples:
 
 Add your answer here...
 
+Phone on silent during deep work sessions
+No social media during learning or project time
+Focus mode enabled while studying or building projects
+Keep phone out of reach when doing deep work
+No multitasking while learning
+Work in a clean, quiet environment
+Limit unnecessary notifications and app usage
 ---
 
 # Reflection – Week 1
@@ -326,25 +363,33 @@ Add your answer here...
 
 Add your answer here...
 
+I realized that my growth depends more on discipline and consistency than motivation. Small, focused actions done daily create real progress over time.
+
+
+
 ### My biggest weakness/loop I noticed
 
 Add your answer here...
+
+I noticed that I tend to get distracted and sometimes switch between tasks without fully completing one thing. This affects my focus and productivity.
 
 ### One system I will implement from this week (exact habit + time)
 
 Add your answer here...
 
+I will commit to 60 minutes of focused deep work every evening at a fixed time, strictly dedicated to DevOps learning or hands-on projects, with no distractions.
+
 ### LinkedIn Post
 
 Paste your LinkedIn post link here:
 
-`__________________________`
+https://www.linkedin.com/posts/nji-ariane-ruth-494805172_week-1-reflection-what-i-learned-about-share-7478581541720465408-5Ld_/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo`__________________________`
 
 ---
 
 ## 10. Proof of Work
 
-- LinkedIn Post URL: **ADD LINK HERE**  
+- LinkedIn Post URL: **https://www.linkedin.com/posts/nji-ariane-ruth-494805172_week-1-reflection-what-i-learned-about-share-7478581541720465408-5Ld_/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo**  
 - Blog / Medium : **ADD LINK HERE**  
 
 ---
