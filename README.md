@@ -70,7 +70,7 @@ This is not a course. It is an internship-style program — real deployments, re
 [![Week 00 - Networking](./badges/week-00.svg)](./week-00-internet-and-networking/)
 
 <!-- Week 01 → Success Mindset -->
-<!-- [![Week 01 – Mindset](./badges/week-01.svg)](./week-01-success-mindset/) -->
+[![Week 01 – Mindset](./badges/week-01.svg)](./week-01-success-mindset/)
 
 <!-- Week 02 → Agentic AI with Claude Code -->
 <!-- [![Week 02 – Agentic AI](./badges/week-02.svg)](./week-02-agentic-ai/) -->
@@ -133,7 +133,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | Week | Topic | Status | Assignment | LinkedIn Post | Blog Post |
 |------|-------|--------|------------|---------------|-----------|
 | 00 | 00 | Internet & Networking Basics | ✅ Completed | ✅ Solved | [Post](https://www.linkedin.com/posts/nji-ariane-ruth-494805172_epic-reads-shop-young-adult-ya-books-activity-7457318965690863616-OvN_?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo) | —
-| 01 | Success Mindset | ⬜ Not Started | ⏳ Pending | — | — |
+| 01 | 01 | Success Mindset | ✅ Completed | ✅ Solved | [Post](https://www.linkedin.com/posts/nji-ariane-ruth-494805172_week-1-reflection-what-i-learned-about-share-7478581541720465408-5Ld_/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo) | —
 | 02 | Agentic AI with Claude Code | ⬜ Not Started | ⏳ Pending | — | — |
 | 03 | Linux for DevOps | ⬜ Not Started | ⏳ Pending | — | — |
 | 04 | Bash Scripting | ⬜ Not Started | ⏳ Pending | — | — |
