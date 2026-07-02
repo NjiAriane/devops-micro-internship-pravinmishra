@@ -36,7 +36,7 @@ Replace `task-1-chatgpt.png` with your actual screenshot file name.
 
 Add your answer here...
 
----
+Using ChatGPT as a learning assistant helped me understand that a protocol is simply a set of agreed-upon rules that allow devices to communicate. Seeing a real-life example made an abstract concept much easier to grasp. I also learned that writing a clear, specific prompt gets a much more useful and simplified answer than a vague one.--
 
 # 🌐 Task 2: Internet and Networking
 
@@ -61,7 +61,7 @@ Write a short explanation (**100–150 words**) that includes:
 
 Add your answer here...
 
----
+---Users around the world can access EpicReads because of how the internet moves data using packet switching. When someone visits the website, their request is broken into small pieces called packets and sent across different routes to reach the server in Finland. Each device on the internet has a unique IP address, which helps direct these packets to the correct destination. The TCP/IP protocol ensures that all packets arrive correctly and are reassembled in the right order. Once the request reaches the server, the website is delivered using HTTP or the more secure HTTPS, which protects user data. Together, these technologies allow users anywhere in the world to quickly and safely access the EpicReads online bookstore.
 
 # 🏗️ Task 3: Application Architecture & Stack
 
@@ -102,19 +102,18 @@ Replace `task-3-diagram.png` with your actual diagram file name.
 
 ### Frontend
 
-* Add your answer here...
-* Add your answer here...
+* HTML/CSS/JavaScript
+* React
 
 ### Backend
 
-* Add your answer here...
-* Add your answer here...
+* Node.js (Express)
+* Python (Django/Flask)
 
 ### Database
 
-* Add your answer here...
-* Add your answer here...
-
+* MySQL
+* MongoDB
 ---
 
 # 🌍 Task 4: Domain Name & DNS (Basic Concepts)
@@ -142,7 +141,8 @@ In **50–100 words**, explain in your own words:
 
 ## Answer
 
-Add your answer here...
+The Domain Name System (DNS) is like the internet’s phonebook. It converts easy-to-remember names like  epicreads.com into an IP address like 52.172.142.222, so browsers can find the website.To connect the domain to the IP, you use an A record. This record links the domain name directly to the server’s IP address. When someone types epicreads.com, the A record tells the browser exactly which IP to go to, making the website accessible.
+
 
 ---
 
@@ -218,8 +218,8 @@ Add the following credit note at the end of your post:
 Paste your LinkedIn post URL here:
 
 ```text
-Add your URL here...
-```
+Add your URL here... 
+```https://www.linkedin.com/posts/nji-ariane-ruth-494805172_epic-reads-shop-young-adult-ya-books-activity-7457318965690863616-OvN_?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo
 
 ---
 
@@ -229,26 +229,42 @@ Paste the full text of your LinkedIn post here:
 
 Add your post content here...
 
----
+---DevOps Learning Journey Micro Internship (Tasks 1–5)
+As part of my ongoing transition into DevOps, I have been strengthening my understanding of core infrastructure and web system concepts through a structured micro internship. Below is a concise overview of my progress so far.
+ - ChatGPT (Learning Enablement Tool)
+ Used as a support tool to clarify concepts, improve technical writing, and reinforce understanding of DevOps fundamentals.
+- Internet & Networking Fundamentals
+ Gained a clearer understanding of how distributed systems communicate over the internet using packet switching, IP addressing, TCP/IP protocols, and HTTP/HTTPS for secure and reliable data transfer.
+- Application Architecture
+Two-tier architecture: Direct communication between frontend and database
+Three-tier architecture: Separation of concerns using frontend, backend, and database layers for improved scalability, maintainability, and security
+- DNS (Domain Name System)
+ Understood how DNS resolves human-readable domain names (e.g., epicreads.com) into IP addresses. Implemented understanding of A records for mapping domains to server endpoints.
+- Development Environment (VS Code)
+ Configured a development environment using VS Code with relevant extensions to improve productivity, code organization, and workflow efficiency.
+This exercise has strengthened my foundational understanding of how modern applications are structured and how data flows across systems in production environments.
+I am actively building toward a DevOps and Cloud Engineering career path with consistent hands-on learning. 
+
+ P.S. This post is part of the FREE DevOps Micro Internship Cohort run by Pravin Mishra. You can start your DevOps journey for free from his YouTube Playlist.
 
 # Reflection – Week 0
 
 ### What did you find easy?
 
 Add your answer here...
-
+Writing the Task 2 and Task 4 explanations was straightforward since I could clearly break down concepts like packet switching, TCP/IP, and DNS once I understood the analogy of the internet as a postal/phonebook system.
 ---
 
 ### What was difficult?
 
 Add your answer here...
-
+Setting up the repository and Git workflow was more challenging than expected — I ran into issues with remotes pointing to the wrong repository, permission errors when pushing to my mentor's repo instead of my own fork, and organizing screenshots and files into the correct folders.
 ---
 
 ### What will you improve next week?
 
 Add your answer here...
-
+I want to get more comfortable with Git remotes and branching so I don't run into permission or setup issues again, and be more organized about saving and naming screenshots as I go instead of after the fact.
 ---
 
 ## 📌 About DMI & CloudAdvisory
