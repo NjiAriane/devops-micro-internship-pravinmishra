@@ -4,10 +4,10 @@
 
 ## 1. Assignment Overview
 
-**Assignment:** Self Reflection Blog
-**Estimated Time:** 45–60 minutes
-**Difficulty:** Beginner
-**Category:** Reflection, Writing, Personal Growth, Agentic AI
+**Assignment:** Self Reflection Blog     
+**Estimated Time:** 45–60 minutes         
+**Difficulty:** Beginner          
+**Category:** Reflection, Writing, Personal Growth, Agentic AI            
 
 ---
 
