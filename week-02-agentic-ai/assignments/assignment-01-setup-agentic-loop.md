@@ -152,9 +152,6 @@ Your submission must include:
 - All 5 required screenshots
 - Your GitHub forked repository URL
 
-Submit only a Google Doc link.
-Follow the Assignment Submission Guidelines — (LINK)
-
 ---
 
 ## 10. Solution Walkthrough
@@ -162,22 +159,7 @@ Follow the Assignment Submission Guidelines — (LINK)
 A step-by-step solution and troubleshooting guide is available for reference:
 Full solution walkthrough → (LINK)
 
----
-
-## 11. LinkedIn Requirement
-
-Create a LinkedIn post including:
-- A screenshot of Claude Code running in your project
-- One sentence describing what the Agentic Loop means to you in your own words
-- Tag: #DMIProgram #AgenticAI #ClaudeCode
-
-**Submit:**
-- LinkedIn post URL
-- Screenshot of the post
-
----
-
-## 12. Completion Checklist
+## 11. Completion Checklist
 
 Before submission, verify:
 - [ ] Claude Code CLI installed and `claude --version` works
@@ -189,6 +171,6 @@ Before submission, verify:
 
 ---
 
-## 13. Final Submission
+## 12. Final Submission
 
-Submit only your Google Doc link.
+Submit your assignment using this google form. 
