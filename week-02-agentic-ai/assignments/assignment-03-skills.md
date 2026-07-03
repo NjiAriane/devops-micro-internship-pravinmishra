@@ -89,7 +89,7 @@ mkdir -p .claude/skills/deploy
 **Goal:** Place all 5 downloaded files into their correct folders.
 
 **Steps:**
-1. Download all 5 files from the Resources section of Lecture 5.1
+1. Download all 5 files from the Resources section of [Setup The Skills Files](https://www.udemy.com/course/ultimate-agentic-ai-devops-with-claude-code/learn/lecture/54819705#overview) from Udemy. 
 2. Move each file to its correct location and rename it:
    - `scaffold-terraform-SKILL.md` → `.claude/skills/scaffold-terraform/SKILL.md`
    - `scaffold-terraform-template-spec.md` → `.claude/skills/scaffold-terraform/template-spec.md`
