@@ -200,4 +200,4 @@ Before submission, verify:
 
 ## 13. Final Submission
 
-Submit only your Google Doc link.
+Submit your assignment using this google form.
