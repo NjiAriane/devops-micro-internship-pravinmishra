@@ -82,12 +82,12 @@ Before starting this assignment, you should have completed the Week 2 assignment
 
 You can write your blog in any of the following formats:
 
-* Google Doc
 * Hashnode blog
 * Medium article
 * Dev.to article
 * LinkedIn article
 * GitHub Markdown file
+* Substack Newsletter
 
 ---
 
