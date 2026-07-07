@@ -80,7 +80,7 @@ claude
 
 **Screenshots Required:**
 - Screenshot 1 — Terminal showing `claude --version` with the version number visible
-- Screenshot 2 — Claude Code authenticated and showing the terminal prompt (your name visible)
+- Screenshot 2 — Claude Code authenticated and showing the terminal prompt 
 
 ---
 
