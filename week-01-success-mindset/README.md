@@ -33,7 +33,6 @@ You will reuse this in later weeks. So do it properly once.
 
 ## Answer
 
-Add your answer here...
 
 I believe there are smarter ways to make money than the traditional path most people follow. Many people around me think success only comes from working long hours for many years, but I believe leverage, skills, and systems can help someone earn more with less physical effort. This does not mean avoiding hard work. It means putting in deep effort at the beginning making sacrifices, learning valuable skills, experimenting, and figuring things out. Once those systems are built, they can keep producing results. I believe smart work multiplied by discipline is more powerful than just hard work alone. Most people disagree because they see effort only in terms of time spent, but I think the real value is in solving problems efficiently and creating opportunities that can grow beyond your direct labor. 
 ---
@@ -56,13 +55,10 @@ Write each truth in this format:
 
 ### Truth
 
-Add your answer here...
-
 Consistency compounds faster than intensity.
 
 ### Evidence from my life
 
-Add your answer here...
 
 Whenever I studied English or practiced tech skills every day, even for one hour, I improved much faster than when I did long random sessions. Small daily effort gave me better results than occasional big effort---
 
@@ -70,13 +66,10 @@ Whenever I studied English or practiced tech skills every day, even for one hour
 
 ### Truth
 
-Add your answer here...
-
 Clear communication creates more opportunities.
 
 ### Evidence from my life
 
-Add your answer here...
 
 As an online tutor, I noticed students understood me better and trusted me more when I explained things simply. Better communication helped me build stronger connections and improve my teaching confidence.---
 
@@ -84,7 +77,6 @@ As an online tutor, I noticed students understood me better and trusted me more 
 
 ### Truth
 
-Add your answer here...
 
 Avoiding hard things makes them harder.
 
@@ -142,7 +134,7 @@ Include this line:
 
 ## Your Article
 
-Add your answer here...
+
 What My Version 2.0 Looks Like
 
 The Rise of a DevOps Leader: A Story of Growth, Impact, and Legacy
@@ -198,7 +190,6 @@ If Yes:
 
 ## Answer
 
-Add your answer here...
 
 ---i felt guilty and anxious,the anxiousness was me always worrying if they found out about my actions
 
@@ -309,7 +300,6 @@ Example:
 
 #### My Weekly Routine
 
-Add your answer here...
 
 Mon–Fri: 60–90 min deep work (DevOps learning and hands-on practice)
 Mon–Wed: Structured learning (cloud, CI/CD, Kubernetes, Terraform)
@@ -325,14 +315,12 @@ Weekend: Rest, reset, and personal time management
 
 #### When Will You Do DMI Work? (Days + Time)
 
-Add your answer here..
 
 sundays..7pm
 wednesdays..7pm
 
 #### How Many Sessions Per Week?
 
-Add your answer here...
 
 ---two
 
@@ -346,7 +334,6 @@ Examples:
 
 #### My Distraction Rules
 
-Add your answer here...
 
 Phone on silent during deep work sessions
 No social media during learning or project time
@@ -361,15 +348,12 @@ Limit unnecessary notifications and app usage
 
 ### Biggest insight I got about myself this week
 
-Add your answer here...
-
 I realized that my growth depends more on discipline and consistency than motivation. Small, focused actions done daily create real progress over time.
 
 
 
 ### My biggest weakness/loop I noticed
 
-Add your answer here...
 
 I noticed that I tend to get distracted and sometimes switch between tasks without fully completing one thing. This affects my focus and productivity.
 
