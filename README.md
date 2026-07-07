@@ -10,15 +10,11 @@
 ---
 
 ## About Me
-
-| | |
 |---|---|
-| **Name** | Pravin Mishra |
-| **LinkedIn** | [pravin-mishra-aws-trainer](https://www.linkedin.com/in/pravin-mishra-aws-trainer/) |
-| **Location** | Helsinki, Finland |
-| **Background** | Cloud, DevOps & AI Consultant |
-| **Goal** | Train 10,000+ DevOps professionals |
-
+| **Name** | Nji Menyonga Ariane Ruth |
+| **LinkedIn** | [Nji Ariane Ruth](https://www.linkedin.com/in/nji-ariane-ruth-494805172) |
+| **Location** | Douala, Cameroon |
+| **Background** | Aspiring DevOps Engineer (currently building skills in Cloud, Linux, and CI/CD) |
 ---
 
 ## About the Program
