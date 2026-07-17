@@ -20,25 +20,24 @@ Verify that the deployed React application is reachable from the browser and con
 
 #### Screenshot 1 — Browser showing the React app with your Full Name visible on the UI
 
-Add your screenshot here.
+![Task 1 Screenshot 1](screenshots/w3a3-t1-screenshot1.png)
 
 ---
 
 #### Screenshot 2 — Output of `ip a`
 
-Add your screenshot here.
+![Task 1 Screenshot 2](screenshots/w3a3-t1-screenshot2.png)
 
 ---
 
 #### Screenshot 3 — Output of `sudo ss -tulpen`
 
-Add your screenshot here.
-
+![Task 1 Screenshot 3](screenshots/w3a3-t1-screenshot3.png)
 ---
 
 #### Screenshot 4 — Output of `sudo ufw status`
 
-Add your screenshot here.
+![Task 1 Screenshot 4](screenshots/w3a3-t1-screenshot4.png)
 
 ---
 
@@ -195,13 +194,13 @@ Answer the following in your own words:
 
 **1. Which resource looks most critical right now? (CPU/load, memory, or disk) Explain why.**
 
-Write your answer here.
+Memory appears to be the most critical resource. Although the server still has available RAM, it is running on a small cloud instance with limited memory. If more applications or user traffic are added, the available memory could be exhausted, causing slower performance or forcing the system to use swap space. In comparison, CPU usage is low and disk usage is moderate, so memory is the resource that requires the closest monitoring.
 
 ---
 
 **2. What happens if disk becomes 100% full in a production server?**
 
-Write your answer here.
+If the disk reaches 100% capacity, the server can no longer write new data. Applications may fail to save files, log files will stop updating, databases may experience errors, and services such as Nginx might fail to restart if they cannot create temporary files or PID files. In severe cases, the server can become unstable or unavailable. Regular monitoring, log rotation, and storage alerts help prevent this situation.
 
 ---
 
@@ -215,20 +214,21 @@ Ensure the correct React build is deployed and Nginx is serving it properly.
 
 #### Screenshot 1 — Output of `ls -lah /var/www/html | head -n 20`
 
-Add your screenshot here.
 
+![Task 2 Screenshot 1](screenshots/w3a3-t5-screenshot1.png)
 ---
 
 #### Screenshot 2 — Output of `grep -R "Deployed by" -n /var/www/html 2>/dev/null | head`
 
-Add your screenshot here.
+![Task 5 Screenshot 2](screenshots/w3a3-t5-screenshot2.png)
+
 
 ---
 
 #### Screenshot 3 — Output of `grep -n "try_files" /etc/nginx/sites-available/default`
 
-Add your screenshot here.
 
+![Task 5 Screenshot 3](screenshots/w3a3-t5-screenshot3.png)
 ---
 
 ### Notes
@@ -237,7 +237,7 @@ Answer the following in your own words:
 
 **1. How do you confirm that the correct version of the application is deployed?**
 
-Write your answer here.
+I confirmed that the correct version of the application was deployed by verifying the contents of /var/www/html and ensuring the expected React production build files were present, including index.html, asset-manifest.json, and the static directory containing the compiled JavaScript and CSS assets. I also checked the Nginx configuration to confirm the try_files directive was correctly configured for React routing. Finally, I accessed the application through the browser and verified that my personalized content (full name and deployment details) was displayed correctly, confirming that the latest build was being served by Nginx.
 
 ---
 
@@ -251,19 +251,22 @@ Simulate a real-world Nginx misconfiguration and recover the service safely.
 
 #### Screenshot 1 — Output of `sudo nginx -t` showing the syntax error (broken config)
 
-Add your screenshot here.
+![Task 6 Screenshot 1](screenshots/w3a3-t6-screenshot1.png)
+
 
 ---
 
 #### Screenshot 2 — Output of `sudo nginx -t` showing syntax ok (fixed config)
 
-Add your screenshot here.
+
+![Task 6 Screenshot 2](screenshots/w3a3-t6-screenshot2.png)
+
 
 ---
 
 #### Screenshot 3 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-Add your screenshot here.
+![Task 6 Screenshot 3](screenshots/w3a3-t6-screenshot3.png)
 
 ---
 
@@ -273,19 +276,18 @@ Answer the following in your own words:
 
 **1. What caused the configuration failure?**
 
-Write your answer here.
+The configuration failure was caused by intentionally adding an invalid directive (brokensyntax) to the Nginx configuration file. When I ran sudo nginx -t, Nginx detected the invalid directive and reported a syntax error, preventing the configuration from being used.
 
 ---
 
 **2. How did you fix the issue?**
-
-Write your answer here.
+I fixed the issue by removing the invalid line from the Nginx configuration file and running sudo nginx -t again to verify that the configuration was valid. Once the syntax test passed successfully, I confirmed the web server was working by sending a request with curl -I and receiving an HTTP 200 OK response.
 
 ---
 
 **3. How can you avoid this kind of issue in real production systems?**
 
-Write your answer here.
+To avoid this type of issue, I would always test configuration changes with sudo nginx -t before reloading or restarting Nginx. I would also keep configuration files under version control, maintain backups of known working configurations, and apply changes through a testing or staging environment before deploying them to production. These practices help reduce downtime and make it easier to recover if a configuration error occurs.
 
 ---
 
@@ -299,14 +301,14 @@ Simulate missing deployment content and recover the application safely.
 
 #### Screenshot 1 — Output of `curl -I http://<public-ip>` showing failure (non-200 response)
 
-Add your screenshot here.
+![Task 7 Screenshot 1](screenshots/w3a3-t7-screenshot1.png)
 
 ---
 
 #### Screenshot 2 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-Add your screenshot here.
 
+![Task 7 Screenshot 2](screenshots/w3a3-t7-screenshot2.png)
 ---
 
 ### Notes
@@ -315,19 +317,19 @@ Answer the following in your own words:
 
 **1. What caused the application to break in this scenario?**
 
-Write your answer here
+The application broke because I temporarily moved the React deployment files out of the /var/www/html directory, leaving Nginx without the files it needed to serve the website. As a result, requests to the application returned an HTTP 500 Internal Server Error, indicating that the application could not be served correctly.
 
 ---
 
 **2. How did you fix the issue and restore the application?**
 
-Write your answer here.
+I restored the original deployment by moving the React build files back into the /var/www/html directory. After restoring the files, I verified that the application was working correctly by running curl -I against the server and confirming that it returned an HTTP 200 OK response.
 
 ---
 
 **3. What steps would you take to prevent this kind of issue in real production systems?**
 
-Write your answer here.
+To prevent this type of issue, I would use automated deployment tools, keep backups of production files, and test deployments in a staging environment before releasing them. I would also implement health checks, monitoring, and rollback procedures so that any deployment problem can be detected quickly and the previous working version can be restored with minimal downtime.
 
 ---
 
@@ -343,32 +345,30 @@ Answer the following in your own words:
 
 **1. Why is SSH key-based authentication more secure than sharing passwords?**
 
-Write your answer here.
+SSH key-based authentication is more secure because it uses a cryptographic key pair instead of a password. Private keys are much harder to guess or brute-force, and they are never transmitted over the network during authentication. This reduces the risk of unauthorized access compared to using passwords.
 
 ---
 
 **2. Why should only required ports be open on a production server?**
+Only the ports required for the application's services should be open because every open port increases the server's attack surface. Closing unnecessary ports reduces the chances of attackers exploiting unused services and improves the overall security of the server.
 
-Write your answer here.
 
 ---
 
 **3. Why is it important for Nginx to be enabled on boot?**
 
-Write your answer here.
-
+Enabling Nginx on boot ensures that the web server starts automatically whenever the server is restarted. This minimizes downtime and allows users to access the application without requiring manual intervention after a reboot.
 ---
 
 **4. What are the risks of sharing secrets, keys, or credentials publicly?**
 
-Write your answer here.
+Sharing secrets, API keys, SSH keys, or passwords can allow unauthorized users to access servers, cloud resources, or sensitive data. This can lead to data breaches, unauthorized changes, financial costs, or complete compromise of the infrastructure. Sensitive credentials should always be stored securely and never committed to public repositories.
 
 ---
 
 **5. Why should cloud resources be stopped or terminated when they are no longer needed?**
 
-Write your answer here.
-
+Unused cloud resources continue to consume compute, storage, and networking resources, which can generate unnecessary costs. Stopping or terminating resources that are no longer needed helps reduce expenses, minimizes security risks, and keeps the cloud environment clean and easier to manage.
 ---
 
 # LinkedIn Post (Required)
@@ -379,13 +379,13 @@ Write your answer here.
 
 Paste your LinkedIn post URL here:
 
-`__________________________`
+`___https://www.linkedin.com/posts/nji-ariane-ruth-494805172_devops-aws-ec2-ugcPost-7483840321639038976-y4Dk/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo_______________________`
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
+![LinkedIn Post](screenshots/w3a2-linkedin.png)
 
 ---
 
@@ -399,17 +399,17 @@ Add your screenshot here.
 
 # Completion Checklist
 
-- [ ] Task 1: Screenshots (browser, ip a, ss -tulpen, ufw status) + Notes answered
-- [ ] Task 2: Screenshots (nginx status, nginx -t, ss port 80) + Notes answered
-- [ ] Task 3: Screenshots (access log, error log, journalctl) + Notes answered
-- [ ] Task 4: Screenshots (uptime, free -h, df -h, du -sh) + Notes answered
-- [ ] Task 5: Screenshots (ls html, grep deployed by, grep try_files) + Notes answered
-- [ ] Task 6: Screenshots (nginx -t fail, nginx -t pass, curl recovery) + Notes answered
-- [ ] Task 7: Screenshots (curl failure, curl recovery) + Notes answered
-- [ ] Task 8: Security & Reliability Notes answered
-- [ ] LinkedIn post published and URL submitted
-- [ ] Full Name visible in all required screenshots
-- [ ] No sensitive data exposed
+- [x] Task 1: Screenshots (browser, ip a, ss -tulpen, ufw status) + Notes answered
+- [x] Task 2: Screenshots (nginx status, nginx -t, ss port 80) + Notes answered
+- [x] Task 3: Screenshots (access log, error log, journalctl) + Notes answered
+- [x] Task 4: Screenshots (uptime, free -h, df -h, du -sh) + Notes answered
+- [x] Task 5: Screenshots (ls html, grep deployed by, grep try_files) + Notes answered
+- [x] Task 6: Screenshots (nginx -t fail, nginx -t pass, curl recovery) + Notes answered
+- [x] Task 7: Screenshots (curl failure, curl recovery) + Notes answered
+- [x] Task 8: Security & Reliability Notes answered
+- [x] LinkedIn post published and URL submitted
+- [x] Full Name visible in all required screenshots
+- [x] No sensitive data exposed
 
 ---
 
