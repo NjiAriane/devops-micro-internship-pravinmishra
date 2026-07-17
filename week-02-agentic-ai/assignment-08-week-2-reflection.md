@@ -48,15 +48,14 @@ You can publish your blog on:
 
 #### Screenshot 1 — Blog published and visible
 
-Add your screenshot here.
 
----
+![Week 2 Blog Screenshot](screenshots/BlogpostAI.png)
 
 ### Submission Field
 
 Blog Link:
 
-`__________________________________________`
+`__https://medium.com/@njiariana/week-02-agentic-ai-reflection-blog-md-ac3c547687f5?sharedUserId=njiariana________________________________________`
 
 ---
 
@@ -94,23 +93,42 @@ Your post must include:
 
 #### Screenshot 2 — LinkedIn post published
 
-Add your screenshot here.
-
----
+![LinkedIn Post](screenshots/linkedInW3.png)
 
 ### Submission Field
 
 LinkedIn Post Content (copy-paste here):
 
 ```
-Paste your LinkedIn post content here
-```
-
+Week 2 Reflection: Learning Agentic AI with Claude Code and DevOps
+This week of the DevOps Micro Internship has been a major learning experience. I moved beyond seeing AI as just a question-answering tool and started understanding how Agentic AI can become part of a real engineering workflow.
+I explored how Claude Code can support DevOps tasks through structured instructions, automation, and safety controls.Some of my key learnings:
+🔹 Agentic Loop & CLAUDE.md
+I learned that AI agents work better when they have clear context, rules, and project instructions. A well-structured CLAUDE.md file helps guide Claude’s behavior and keeps the workflow consistent.
+🔹 Skills and Subagents
+I discovered how reusable skills and specialized subagents can improve productivity by breaking complex tasks into smaller, focused workflows. Instead of repeating long instructions, we can create reusable processes that make our work more efficient.
+🔹 MCP (Model Context Protocol)
+Connecting Claude to external systems showed me how AI agents can interact with real-world tools and data sources. This changed my perspective on AI from being only conversational to being capable of supporting engineering operations.
+🔹 Hooks and Permissions
+One of my biggest highlights was implementing safety rails for Claude Code. Learning about UserPromptSubmit hooks, PreToolUse hooks, PostToolUse logging, and permission controls showed me that automation must always come with security and governance.
+Giving AI more power requires giving it the right boundaries.
+🔹 Memory
+The memory system helped me understand how AI assistants can maintain project knowledge across sessions. This is important for long-term projects where decisions, conventions, and rules need to remain consistent.
+One of my biggest personal lessons this week was about Git upstream workflows.
+I learned that before starting work on any project, checking the upstream repository and fetching the latest changes is an important habit. Because I missed this step initially, I had to go back to some tasks, fetch updates, and make sure my work was aligned with the latest version of the project.
+My biggest mindset shift this week:
+AI is not replacing engineering skills. Instead, it amplifies them. A good DevOps engineer still needs to understand systems, read errors, verify outputs, manage security, and make informed decisions.
+The most valuable lesson I learned:
+Automation makes us faster, but understanding makes us better engineers.
+Looking forward to applying these lessons in more cloud, infrastructure, and automation projects.
+Grateful to my Lead Co-mentor Anjana Muthunayake, my group 2 mentors: Faith Samson Joy Ukpabi Rukevwe ubioworo and lastly my fellow group 2 members. 
+P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by Pravin Mishra. You can start your DevOps journey by joining this Discord community ( https://lnkd.in/e6bCTzfz ).
+#DMIByPravinMishra #AgenticAI #ClaudeCode #DevOps #LearningInPublic
 ---
 
 ### LinkedIn Post Link:
 
-`__________________________________________`
+`________https://www.linkedin.com/posts/nji-ariane-ruth-494805172_dmibypravinmishra-agenticai-claudecode-ugcPost-7481415269890899968-B4cE/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo__________________________________`
 
 ---
 
@@ -126,15 +144,15 @@ Paste your LinkedIn post content here
 
 # Completion Checklist
 
-* [ ] Blog written with required structure
-* [ ] Blog includes at least 2–3 Week 2 topics
-* [ ] Blog is publicly accessible
-* [ ] LinkedIn post created
-* [ ] Required P.S. line included
-* [ ] LinkedIn post content copied in submission field
-* [ ] Blog link added
-* [ ] LinkedIn post link added
-* [ ] Screenshots added to GitHub repo
+* [x] Blog written with required structure
+* [x] Blog includes at least 2–3 Week 2 topics
+* [x] Blog is publicly accessible
+* [x] LinkedIn post created
+* [x] Required P.S. line included
+* [x] LinkedIn post content copied in submission field
+* [x] Blog link added
+* [x] LinkedIn post link added
+* [x] Screenshots added to GitHub repo
 
 ---
 
