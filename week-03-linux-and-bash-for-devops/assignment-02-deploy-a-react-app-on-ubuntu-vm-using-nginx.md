@@ -34,7 +34,7 @@ Install Nginx, start the service, and confirm it is running.
 
 #### Screenshot 2 — Output of `systemctl status nginx --no-pager` showing Active (running)
 
-![Screenshot 3](screenshots/w3a2-screenshot3.png)
+![Screenshot 2](screenshots/w3a2-screenshot2.png)
 
 
 # Task 3 — Clone React Application
@@ -47,7 +47,7 @@ Clone the project repository and verify the project files are present.
 
 #### Screenshot 3 — Output of `ls` inside the `my-react-app` directory showing project files
 
-![Screenshot 4](screenshots/w3a2-screenshot4.png)
+![Screenshot 3](screenshots/w3a2-screenshot3.png)
 
 
 # Task 4 — Modify Application (Personalization)
@@ -60,7 +60,7 @@ Update `App.js` with your full name and the current date.
 
 #### Screenshot 4 — `nano App.js` open showing your full name and date filled in
 
-![Screenshot 5](screenshots/w3a2-screenshot5.png)
+![Screenshot 4](screenshots/w3a2-screenshot4.png)
 
 
 # Task 5 — Build React Application
@@ -77,8 +77,6 @@ Install dependencies and generate the production build.
 
 
 # Task 6 — Deploy React Build to Nginx Web Root
-
-## Goal
 
 Copy the production build files to the Nginx web root directory.
 
