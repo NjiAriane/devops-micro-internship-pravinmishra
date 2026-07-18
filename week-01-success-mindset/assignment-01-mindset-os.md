@@ -156,9 +156,8 @@ P.S. This post is part of the DevOps Micro Internship with Agentic AI Cohort-3 b
 
 ### Public Link
 
-Paste your link here:
 
-`https://www.linkedin.com/posts/nji-ariane-ruth-494805172_what-my-version-20-looks-like-the-rise-activity-7478572813419786241-9Paa?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo__________________________`
+https://www.linkedin.com/posts/nji-ariane-ruth-494805172_what-my-version-20-looks-like-the-rise-activity-7478572813419786241-9Paa?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo__________________________`
 
 ---
 
@@ -365,7 +364,6 @@ I will commit to 60 minutes of focused deep work every evening at a fixed time, 
 
 ### LinkedIn Post
 
-Paste your LinkedIn post link here:
 
 https://www.linkedin.com/posts/nji-ariane-ruth-494805172_week-1-reflection-what-i-learned-about-share-7478581541720465408-5Ld_/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo`__________________________`
 
