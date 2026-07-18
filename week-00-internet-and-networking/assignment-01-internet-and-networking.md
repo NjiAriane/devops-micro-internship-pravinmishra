@@ -216,14 +216,11 @@ Add the following credit note at the end of your post:
 ## LinkedIn Post URL
 
 :
-
-```text
-
-```https://www.linkedin.com/posts/nji-ariane-ruth-494805172_epic-reads-shop-young-adult-ya-books-activity-7457318965690863616-OvN_?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo
+https://www.linkedin.com/posts/nji-ariane-ruth-494805172_epic-reads-shop-young-adult-ya-books-activity-7457318965690863616-OvN_?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo
 
 ---
 
-## LinkedIn Post Backup Copy
+## LinkedIn Post Backup
 
 
 
