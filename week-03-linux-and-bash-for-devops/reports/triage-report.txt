@@ -1,0 +1,21 @@
+======================================================
+ Linux Triage Report
+======================================================
+ Full Name : NJI ARIANE RUTH
+ Host      : ariana-Latitude-5310-2-in-1
+ Generated : 2026-07-20 17:57:21
+ Mode      : READ-ONLY (no system changes made)
+------------------------------------------------------
+  [FAIL   ] Nginx Service        systemctl is-active nginx => inactive
+  [FAIL   ] HTTP Port            No process listening on TCP port 80
+  [FAIL   ] Website Response     curl -I http://localhost => HTTP 000 (no successful response)
+  [HEALTHY] System Resources     Memory used 27% (warn >= 80%), Disk / used 34% (warn >= 80%), load average: 1.14, 0.94, 0.68
+  [FAIL   ] Application Health   Application not fully serving traffic (service=FAIL, port=FAIL, response=FAIL)
+------------------------------------------------------
+ SUMMARY
+   Checks : 5
+   Failed : 4
+   Warned : 0
+   Overall Status: FAIL
+   Report saved to: reports/triage-report.txt
+======================================================
