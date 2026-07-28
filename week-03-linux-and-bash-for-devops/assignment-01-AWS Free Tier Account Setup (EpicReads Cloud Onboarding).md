@@ -1,4 +1,4 @@
-# Assignment 1 — AWS Free Tier Account Setup (EpicReads Cloud Onboarding)
+# Assignment 1 — AWS Free Tier Account Setup.md 
 
 Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
 
