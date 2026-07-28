@@ -47,19 +47,19 @@ Answer the following in your own words:
 
 **1. What proves Nginx is listening on 0.0.0.0:80?**
 
-Write your answer here.
+In the ss -tulpen output, there's a line showing tcp LISTEN 0.0.0.0:80 with the process listed as nginx (three nginx worker processes). The 0.0.0.0 address means it's listening on all available network interfaces, not just localhost, confirming Nginx is ready to accept traffic from any external IP on port 80.
 
 ---
 
 **2. What proves SSH is active on port 22?**
 
-Write your answer here.
+The output shows tcp LISTEN 0.0.0.0:22 with the process sshd, confirming the SSH daemon is actively listening for incoming connections on port 22 across all interfaces.
 
 ---
 
 **3. Did you find any unexpected open ports? Explain briefly.**
 
-Write your answer here.
+No unexpected ports were found. Only the expected services are listening: Nginx (port 80), SSH (port 22), and internal system services like systemd-resolved (DNS, localhost-only) and chronyd (NTP time sync, localhost-only). These internal services aren't exposed externally. Interestingly, ufw (the local firewall) shows as "inactive," meaning port restriction is likely being handled instead by the AWS Security Group at the cloud level rather than the OS firewall — worth noting as a defense-in-depth consideration.
 
 ---
 
@@ -73,19 +73,19 @@ Verify that Nginx is properly installed, running, enabled at boot, and safely co
 
 #### Screenshot 1 — Output of `systemctl status nginx --no-pager`
 
-Add your screenshot here.
+![Task 2 Screenshot 1](screenshots/w3a3-t2-screenshot1.png)
 
 ---
 
 #### Screenshot 2 — Output of `sudo nginx -t`
 
-Add your screenshot here.
+![Task 2 Screenshot 2](screenshots/w3a3-t2-screenshot2.png)
 
 ---
 
 #### Screenshot 3 — Output of `sudo ss -lptn '( sport = :80 )'`
 
-Add your screenshot here.
+![Task 2 Screenshot 3](screenshots/w3a3-t2-screenshot3.png)
 
 ---
 
@@ -95,13 +95,13 @@ Answer the following in your own words:
 
 **1. What happens if Nginx fails to restart in production?**
 
-Write your answer here.
+If Nginx fails to restart, the web server stops serving requests entirely, meaning the website becomes completely unreachable. Since Nginx is enabled at boot, it would also fail to come back automatically after a reboot if the underlying issue isn't fixed. This would directly impact users and require manual diagnosis to resolve.
 
 ---
 
 **2. What's your basic rollback plan?**
 
-Write your answer here.
+My rollback plan is to run sudo nginx -t first to check for a syntax error, since nginx won't reload a broken config. If the config is bad, I'd revert to the last known-working version, re-run sudo nginx -t to confirm it's valid, then restart the service with sudo systemctl restart nginx, and verify recovery with curl -I http://localhost.
 
 ---
 
@@ -115,19 +115,20 @@ Verify real traffic flow and analyze logs to understand system behavior and erro
 
 #### Screenshot 1 — Output of `sudo tail -n 30 /var/log/nginx/access.log`
 
-Add your screenshot here.
+![Task 3 Screenshot 1](screenshots/w3a3-t3-screenshot1.png)
 
 ---
 
 #### Screenshot 2 — Output of `sudo tail -n 30 /var/log/nginx/error.log`
 
-Add your screenshot here.
+![Task 3 Screenshot 2](screenshots/w3a3-t3-screenshot2.png)
 
 ---
 
 #### Screenshot 3 — Output of `sudo journalctl -u nginx --no-pager -n 50`
 
-Add your screenshot here.
+![Task 3 Screenshot 3](screenshots/w3a3-t3-screenshot3.png)
+
 
 ---
 
@@ -140,19 +141,21 @@ Answer the following in your own words:
 - If yes, mention 1–2 example error lines from the logs and explain what each one means in simple terms.
 - If no, explain what it means if the error log is empty or shows no recent errors during your check.
 
-Write your answer here.
+
+No true errors were found in error.log — it only contains a single [notice] level entry logged during Nginx startup, not an actual failure. However, access.log shows scanning activity from external IPs probing for common webshell filenames (e.g. /shell.php, /wso.php) and sensitive files (e.g. /.env). These are automated bots scanning for known vulnerabilities, which is common for any publicly reachable server.
 
 ---
 
 **2. If there were no errors, what does that indicate about the system?**
 
-Write your answer here.
+An error-free error.log indicates Nginx is running smoothly with no configuration or service-level failures. However, this doesn't mean "no risk" — the scanning traffic is a reminder that a public server is constantly probed, regardless of application bugs.
 
 ---
 
 **3. Based on the access logs, were your curl requests visible in the log entries? What does that prove about traffic flow?**
 
-Write your answer here.
+
+Yes, my curl request was clearly visible: ::1 - - [17/Jul/2026:13:16:25 +0000] "GET / HTTP/1.1" 200 644 "-" "curl/8.18.0". This confirms the full traffic flow works correctly — a client request reaches Nginx, gets processed and served, and is accurately logged.
 
 ---
 
@@ -166,25 +169,26 @@ Assess server capacity and detect potential performance or failure risks.
 
 #### Screenshot 1 — Output of `uptime`
 
-Add your screenshot here.
+![Task 4 Screenshot 1](screenshots/w3a3-t4-screenshot1.png)
 
 ---
 
 #### Screenshot 2 — Output of `free -h`
 
-Add your screenshot here.
+
+![Task 4 Screenshot 2](screenshots/w3a3-t4-screenshot2.png)
 
 ---
 
 #### Screenshot 3 — Output of `df -h`
 
-Add your screenshot here.
+![Task 4 Screenshot 3](screenshots/w3a3-t4-screenshot3.png)
 
 ---
 
 #### Screenshot 4 — Output of `sudo du -sh /var/* | sort -h`
 
-Add your screenshot here.
+![Task 4 Screenshot 4](screenshots/w3a3-t4-screenshot4.png)
 
 ---
 
