@@ -31,7 +31,7 @@ You will reuse this in later weeks. So do it properly once.
 
 **Hint:** What do you believe about career, money, learning, discipline, relationships, health, success, life, tech industry, etc. that most people don't agree with?
 
-## Answer
+
 
 
 I believe there are smarter ways to make money than the traditional path most people follow. Many people around me think success only comes from working long hours for many years, but I believe leverage, skills, and systems can help someone earn more with less physical effort. This does not mean avoiding hard work. It means putting in deep effort at the beginning making sacrifices, learning valuable skills, experimenting, and figuring things out. Once those systems are built, they can keep producing results. I believe smart work multiplied by discipline is more powerful than just hard work alone. Most people disagree because they see effort only in terms of time spent, but I think the real value is in solving problems efficiently and creating opportunities that can grow beyond your direct labor. 
@@ -53,7 +53,6 @@ Write each truth in this format:
 
 ## Truth #1
 
-### Truth
 
 Consistency compounds faster than intensity.
 
@@ -64,8 +63,6 @@ Whenever I studied English or practiced tech skills every day, even for one hour
 
 ## Truth #2
 
-### Truth
-
 Clear communication creates more opportunities.
 
 ### Evidence from my life
@@ -74,8 +71,6 @@ Clear communication creates more opportunities.
 As an online tutor, I noticed students understood me better and trusted me more when I explained things simply. Better communication helped me build stronger connections and improve my teaching confidence.---
 
 ## Truth #3
-
-### Truth
 
 
 Avoiding hard things makes them harder.
@@ -187,7 +182,7 @@ If Yes:
 
 **What emotion did you feel?** (minimum 50–100 words)
 
-## Answer
+
 
 
 ---i felt guilty and anxious,the anxiousness was me always worrying if they found out about my actions
@@ -358,7 +353,6 @@ I noticed that I tend to get distracted and sometimes switch between tasks witho
 
 ### One system I will implement from this week (exact habit + time)
 
-Add your answer here...
 
 I will commit to 60 minutes of focused deep work every evening at a fixed time, strictly dedicated to DevOps learning or hands-on projects, with no distractions.
 
