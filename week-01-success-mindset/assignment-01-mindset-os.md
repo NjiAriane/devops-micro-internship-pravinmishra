@@ -77,7 +77,7 @@ Avoiding hard things makes them harder.
 
 ### Evidence from my life
 
-Add your answer here...
+
 Whenever I delayed difficult tasks like technical assignments or important decisions, the stress increased. But once I started, the task often felt easier than I imagined.
 ---
 
