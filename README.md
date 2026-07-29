@@ -129,11 +129,11 @@ This is not a course. It is an internship-style program — real deployments, re
 |---|---|---|---|---|---|
 | 00 | Internet & Networking Basics | ✅ Completed | ✅ Solved | [Post](https://www.linkedin.com/posts/nji-ariane-ruth-494805172_epic-reads-shop-young-adult-ya-books-activity-7457318965690863616-OvN_?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo) | — |
 | 01 | Success Mindset | ✅ Completed | ✅ Solved | [Post](https://www.linkedin.com/posts/nji-ariane-ruth-494805172_week-1-reflection-what-i-learned-about-activity-7478581544467509248-ZtMo?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo) | — |
-| 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Solved | [Post](https://www.linkedin.com/posts/nji-ariane-ruth-494805172_dmibypravinmishra-agenticai-claudecode-ugcPost-7481415269890899968-B4cE/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo) |https://medium.com/@njiariana |
-| 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | [Post](https://www.linkedin.com/posts/nji-ariane-ruth-494805172_devops-linux-bash-activity-7485082476235804673-igvk) | https://medium.com/@njiariana|
-| 04 | Git & GitHub | ✅ Completed | ✅ Solved | [Post](https://www.linkedin.com/posts/nji-ariane-ruth-494805172_devops-git-github-activity-7486566169047400450-JVY0?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo) | https://medium.com/@njiariana |
-| 05 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
-| 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
+| 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Solved | [Post](https://www.linkedin.com/posts/nji-ariane-ruth-494805172_dmibypravinmishra-agenticai-claudecode-ugcPost-7481415269890899968-B4cE/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo) |https://dmi.pravinmishra.com/s/NjiAriane.html |
+| 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | [Post](https://www.linkedin.com/posts/nji-ariane-ruth-494805172_devops-linux-bash-activity-7485082476235804673-igvk) | https://dmi.pravinmishra.com/s/NjiAriane.html|
+| 04 | Git & GitHub | ✅ Completed | ✅ Solved | [Post](https://www.linkedin.com/posts/nji-ariane-ruth-494805172_devops-git-github-activity-7486566169047400450-JVY0?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo) | https://dmi.pravinmishra.com/s/NjiAriane.html|
+| 05 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | https://lnkd.in/p/dUVv_miH | https://dmi.pravinmishra.com/s/NjiAriane.html |
+| 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | —|
 | 07 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
 | 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
