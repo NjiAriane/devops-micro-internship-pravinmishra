@@ -20,19 +20,20 @@ Create a VNet (10.0.0.0/16) with a public subnet (10.0.1.0/24) for the VM and a 
 
 #### Screenshot 1 — Virtual Network overview showing the 10.0.0.0/16 address space and both subnets
 
-Add your screenshot here.
+![Screenshot 1 — VNet and Subnets](screenshots/screenshot-01-vnet-subnets.png)
 
 ---
 
 #### Screenshot 2 — Public and private NSG inbound rules showing ports 80, 22, and restricted 3306 access
 
-Add your screenshot here.
+![Screenshot 2 — NSG Rules](screenshots/screenshot-02-nsg-rules.png)
 
 ---
 
 #### Screenshot 3 — Public IP and Network Interface association for the Virtual Machine
 
-Add your screenshot here.
+![Screenshot 3 — Public IP and NIC](screenshots/screenshot-03-public-ip-nic.png)
+
 
 ---
 
@@ -46,13 +47,15 @@ Launch an Ubuntu 22.04 LTS VM (Standard B1s or equivalent) in the public subnet,
 
 #### Screenshot 4 — Virtual Machine overview showing Ubuntu, size, public IP, and subnet
 
-Add your screenshot here.
+![Screenshot 4 — VM Overview](screenshots/screenshot-04-vm-overview.png)
+
 
 ---
 
 #### Screenshot 5 — Terminal showing successful software installation or installed-version checks
 
-Add your screenshot here.
+![Screenshot 5 — Software Installation](screenshots/screenshot-05-software-installation.png)
+
 
 ---
 
@@ -66,19 +69,23 @@ Clone the EpicBook repository, install dependencies, build the frontend, configu
 
 #### Screenshot 6 — Terminal showing the EpicBook repository cloned and dependencies installed
 
-Add your screenshot here.
+![Screenshot 6 — EpicBook Installation](screenshots/assignment-05-screenshot-06-epicbook-install.png)
+
+
 
 ---
 
 #### Screenshot 7 — Nginx configuration or service status proving the frontend is configured to be served
 
-Add your screenshot here.
+![Screenshot 7 — Nginx Configuration](screenshots/screenshot-07-nginx-status.png)
+
 
 ---
 
 #### Screenshot 8 — Backend process or listening-port evidence (without exposing environment-variable secrets)
 
-Add your screenshot here.
+![Screenshot 8 — Backend Running](screenshots/screenshot-08-backend-running.png)
+
 
 ---
 
@@ -92,19 +99,23 @@ Create a private Azure Database for MySQL Flexible Server (VNet Integration) in 
 
 #### Screenshot 9 — MySQL Flexible Server overview showing Private access (VNet Integration)
 
-Add your screenshot here.
+
+![Screenshot 9 — MySQL Server Overview](screenshots/screenshot-09-mysql-overview.png)
+
 
 ---
 
 #### Screenshot 10 — Networking configuration showing the private subnet and restricted access
 
-Add your screenshot here.
+![Screenshot 10 — MySQL Networking](screenshots/screenshot-10-mysql-networking.png)
+
 
 ---
 
 #### Screenshot 11 — MySQL Client output showing the EpicBook database or imported tables (no password visible)
 
-Add your screenshot here.
+![Screenshot 11 — MySQL Tables and Data](screenshots/screenshot-11-mysql-tables.png)
+
 
 ---
 
@@ -118,21 +129,23 @@ Confirm the EpicBook application loads through the VM's public IP and that viewi
 
 #### Screenshot 12 — Browser showing the EpicBook application with the Virtual Machine public IP visible
 
-Add your screenshot here.
+![Screenshot 12 — EpicBook Application](screenshots/screenshot-12-epicbook-browser.png)
 
 ---
 
 #### Screenshot 13 — Proof of a successful database-backed action (viewing products, adding to cart, or placing an order)
 
-Add your screenshot here.
+![Screenshot 13 — Database-Backed Action](screenshots/screenshot-13-database-action.png)
+
 
 ---
 
-#### Public IP URL
+#### Public IP EpicBook Application
+
 
 Paste the public IP URL of your Virtual Machine here:
 
-`Add your URL here`
+ http://20.81.55.19
 
 ---
 
@@ -146,12 +159,12 @@ Paste the public IP URL of your Virtual Machine here:
 
 # Completion Checklist
 
-- [ ] Task 1: Network foundation created with public/private subnets and NSGs (Screenshots 1–3)
-- [ ] Task 2: VM provisioned and required software installed (Screenshots 4–5)
-- [ ] Task 3: EpicBook frontend and backend deployed (Screenshots 6–8)
-- [ ] Task 4: Private Azure Database for MySQL created and data imported (Screenshots 9–11)
-- [ ] Task 5: End-to-end functionality validated (Screenshots 12–13, Public IP URL)
-- [ ] No sensitive data exposed
+- [x] Task 1: Network foundation created with public/private subnets and NSGs (Screenshots 1–3)
+- [x] Task 2: VM provisioned and required software installed (Screenshots 4–5)
+- [x] Task 3: EpicBook frontend and backend deployed (Screenshots 6–8)
+- [x] Task 4: Private Azure Database for MySQL created and data imported (Screenshots 9–11)
+- [x] Task 5: End-to-end functionality validated (Screenshots 12–13, Public IP URL)
+- [x] No sensitive data exposed
 
 ---
 
