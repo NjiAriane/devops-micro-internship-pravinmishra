@@ -20,13 +20,12 @@ Create an architecture diagram and implementation plan identifying the presentat
 
 #### Screenshot 1 — Architecture diagram showing the public entry point, three tiers, network boundaries, and traffic flow
 
-Add your screenshot here.
-
+![Architecture](screenshots/assignment-06-screenshot-01-architecture.png)
 ---
 
 #### Screenshot 2 — Written architecture assumptions and selected Azure services
 
-Add your screenshot here.
+![Architecture Assumptions](screenshots/assignment-06-screenshot-02-architecture-assumptions.png)
 
 ---
 
@@ -40,19 +39,19 @@ Create a dedicated Resource Group and VNet with separate subnets for the web, ap
 
 #### Screenshot 3 — Resource Group overview showing the assignment resources
 
-Add your screenshot here.
+![Resource Group](screenshots/assignment-06-screenshot-03-resource-group.png)
 
 ---
 
 #### Screenshot 4 — VNet overview showing the address space and all required subnets
 
-Add your screenshot here.
+![VNet and Subnets](screenshots/assignment-06-screenshot-04-vnet-subnets.png)
 
 ---
 
 #### Screenshot 5 — Route-table or Private DNS evidence where applicable
 
-Add your screenshot here.
+![Route and Private DNS](screenshots/assignment-06-screenshot-05-route-private-dns.png)
 
 ---
 
@@ -66,13 +65,13 @@ Apply least-privilege NSG rules so traffic flows Internet → public entry point
 
 #### Screenshot 6 — NSG rules proving least-privilege access between the tiers
 
-Add your screenshot here.
+![NSG Rules](screenshots/assignment-06-screenshot-06-nsg-rules.png)
 
 ---
 
 #### Screenshot 7 — Key Vault or approved secret-management configuration (without displaying secret values)
 
-Add your screenshot here.
+![Key Vault](screenshots/assignment-06-screenshot-07-key-vault.png)
 
 ---
 
@@ -86,13 +85,14 @@ Deploy the Book Review App presentation layer on the approved web-tier compute s
 
 #### Screenshot 8 — Web-tier compute overview showing subnet and availability configuration
 
-Add your screenshot here.
+![Web Tier](screenshots/assignment-06-screenshot-08-web-tier.png)
 
 ---
 
 #### Screenshot 9 — Terminal or service output proving the presentation layer is running
 
-Add your screenshot here.
+### Screenshot 09 — Web Tier Running
+![Web Tier Running](screenshots/assignment-06-screenshot-09-web-tier-running.png)
 
 ---
 
@@ -106,19 +106,19 @@ Deploy the Book Review App backend privately in the application subnet, configur
 
 #### Screenshot 10 — Application-tier compute overview showing private subnet placement
 
-Add your screenshot here.
+![App Tier](screenshots/assignment-06-screenshot-10-app-tier.png)
 
 ---
 
 #### Screenshot 11 — Backend process, service, or listening-port evidence
 
-Add your screenshot here.
+![Backend Running](screenshots/assignment-06-screenshot-11-backend-running.png)
 
 ---
 
 #### Screenshot 12 — Internal health-check or API response (without exposing secrets)
 
-Add your screenshot here.
+![Internal Health Check](screenshots/assignment-06-screenshot-12-internal-health-check.png)
 
 ---
 
@@ -132,19 +132,20 @@ Create a private Azure managed database (public access disabled), with availabil
 
 #### Screenshot 13 — Database overview showing private connectivity and public access disabled
 
-Add your screenshot here.
+![Database Private Networking](screenshots/assignment-06-screenshot-13-database-private.png)
 
 ---
 
 #### Screenshot 14 — Availability, backup, and retention configuration
 
-Add your screenshot here.
+![Database Backups](screenshots/assignment-06-screenshot-14-database-backups.png)
+
 
 ---
 
 #### Screenshot 15 — Successful schema or connectivity verification (without exposing credentials)
 
-Add your screenshot here.
+![Database Schema](screenshots/assignment-06-screenshot-15-database-schema.png)
 
 ---
 
@@ -158,19 +159,18 @@ Configure the approved public entry service with health probes and backend pools
 
 #### Screenshot 16 — Public entry service showing listener, frontend endpoint, and healthy web targets
 
-Add your screenshot here.
-
+![Public Entry and Healthy Backend](screenshots/assignment-06-screenshot-16-public-entry-healthy.png)
 ---
 
 #### Screenshot 17 — Internal application-tier load-balancing or routing configuration where applicable
 
-Add your screenshot here.
+![Internal App Routing](screenshots/assignment-06-screenshot-17-internal-app-routing.png)
 
 ---
 
 #### Screenshot 18 — Azure Monitor, diagnostic settings, logs, metrics, or alert evidence
 
-Add your screenshot here.
+![Monitoring Metrics](screenshots/assignment-06-screenshot-18-monitoring-metrics.png)
 
 ---
 
@@ -184,33 +184,32 @@ Confirm the Book Review App works end to end through the public endpoint, with a
 
 #### Screenshot 19 — Browser showing the Book Review App through the public endpoint
 
-Add your screenshot here.
+![Public Application](screenshots/assignment-06-screenshot-19-public-app.png)
 
 ---
 
 #### Screenshot 20 — Proof of successful database-backed read and write operations
 
-Add your screenshot here.
+![Database Data](screenshots/assignment-06-screenshot-20-database-data.png)
 
 ---
 
 #### Screenshot 21 — Evidence that private tiers are not publicly accessible
 
-Add your screenshot here.
+![End-to-End Test](screenshots/assignment-06-screenshot-21-end-to-end.png)
 
 ---
 
 #### Screenshot 22 — Availability-test and healthy-target evidence
 
-Add your screenshot here.
-
+![Final Architecture](screenshots/assignment-06-screenshot-22-final-architecture.png)
 ---
 
 #### Public Endpoint
 
 Paste your public endpoint URL here:
 
-`Add your URL here`
+http://52.186.159.163
 
 ---
 
