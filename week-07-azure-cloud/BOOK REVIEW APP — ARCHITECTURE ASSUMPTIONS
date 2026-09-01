@@ -1,0 +1,66 @@
+BOOK REVIEW APP — ARCHITECTURE ASSUMPTIONS
+
+Architecture: Three-Tier Azure Architecture
+
+1. PRESENTATION / WEB TIER
+Azure Service: Azure App Service
+Purpose: Hosts the Book Review App frontend/presentation layer.
+Network: Web subnet
+Access: Receives traffic only from the public entry point.
+
+2. APPLICATION / BUSINESS TIER
+Azure Service: Azure Container Apps
+Purpose: Runs the Book Review App backend/API.
+Network: Application subnet
+Access: Private/internal access only.
+The backend is not directly exposed to the Internet.
+
+3. DATABASE TIER
+Azure Service: Azure Database for MySQL Flexible Server
+Purpose: Stores Book Review App data.
+Network: Database subnet / private access
+Access: Only the application tier can connect to the database.
+
+4. PUBLIC ENTRY POINT
+Azure Service: Azure Application Gateway
+Purpose: Single public entry point for users.
+Security: WAF enabled.
+Traffic: Internet → Application Gateway → Web Tier
+
+5. NETWORK SECURITY
+Azure Services: Virtual Network + NSGs + Private DNS
+Purpose: Isolate the three tiers and enforce least-privilege traffic.
+
+6. SECRET MANAGEMENT
+Azure Service: Azure Key Vault
+Purpose: Securely stores database credentials and application secrets.
+Secrets are never stored directly in source code or exposed publicly.
+
+7. MONITORING
+Azure Service: Azure Monitor
+Purpose: Collects metrics, logs, diagnostics, and alerts for important resources.
+
+8. BACKUP & AVAILABILITY
+Database backups and retention are enabled.
+Availability settings are configured according to the selected Azure service capabilities.
+
+TRAFFIC FLOW
+
+Internet
+   ↓
+Application Gateway (Public)
+   ↓
+Web Tier
+   ↓
+Application Tier (Private)
+   ↓
+MySQL Database Tier (Private)
+
+SECURITY PRINCIPLES
+
+• Least-privilege network access
+• No direct Internet access to application tier
+• No direct Internet access to database tier
+• Secrets stored in Key Vault
+• Database accessed through private networking
+• Monitoring and logging enabled
