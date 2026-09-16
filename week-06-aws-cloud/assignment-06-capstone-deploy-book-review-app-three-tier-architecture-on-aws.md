@@ -85,8 +85,7 @@ Capture visual proof of every tier and load balancer.
 
 #### App EC2
 
-![App EC2](screenshots/week-6-assign-6-task-4-app-ec2.png)
-
+![App EC2](screenshots/App-EC2.png)
 ---
 
 #### Public ALB
