@@ -29,6 +29,12 @@ Choose Team Mode or Solo Mode, and document how each Scrum role (Product Owner, 
 
 Write one line for each role: PO (what you prioritized), SM (how you ensured process), Dev Lead (what you built), DevOps Lead (how you shipped).
 
+
+- **PO:** Prioritized UI improvements that increased discoverability and trust, including clear labels, calls-to-action, and user-focused content.
+- **SM:** Kept the work organized in Jira, ensured the backlog was refined, stories were estimated, Sprint 1 was planned, and progress was tracked through the board and burndown.
+- **Dev Lead:** Implemented a small UI-only improvement to the Gotto Job website and verified the change locally.
+- **DevOps Lead:** Committed the change to Git, deployed the updated website, and verified the live UI through the public URL.
+
 ---
 
 # Task 2 — Create the Jira Project (Team-managed → Scrum)
