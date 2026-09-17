@@ -2,15 +2,13 @@
 
 Part of the DevOps Micro Internship (DMI) with Agentic AI
 
----
-
 ## Purpose
 
-In this assignment, you will build a read-only Bash script that audits the AWS resources you deployed earlier this week — your S3 static site, EC2 instance(s), security groups, RDS database, and EBS volumes — for common security and cost misconfigurations.
+In this assignment, I built a read-only Bash script that audits AWS resources deployed earlier in the week, including S3, EC2, security groups, RDS, and EBS volumes.
 
-You will then connect that script to Claude Code as a reusable `/aws-audit` skill that explains what it found and recommends a fix, without ever making the fix itself.
+I then connected the audit workflow to Claude Code as a reusable `/aws-audit` skill. The skill analyzes the audit evidence and recommends remediation steps without executing them automatically.
 
-Finally, you will find a real misconfiguration in your own account, apply the fix yourself, and prove it worked with a second audit run.
+Finally, I identified security findings in my AWS environment, applied remediation manually, and ran the audit again to verify the changes.
 
 ---
 
@@ -18,31 +16,31 @@ Finally, you will find a real misconfiguration in your own account, apply the fi
 
 ## Goal
 
-Confirm your AWS CLI is authenticated and can see the S3 bucket, EC2 instance(s), and RDS instance you built earlier this week, then create a workspace folder for this assignment.
+Confirm that the AWS CLI is authenticated and can identify the AWS resources deployed earlier in the week.
 
-### Evidence
+## Evidence
 
-#### Screenshot 1 — Output of `aws s3 ls`, the EC2 instance table, and the RDS instance table (blur the Account ID if visible)
+### Screenshot 1 — AWS Resource Listings
 
-Add your screenshot here.
-
----
-
-#### Screenshot 2 — Output of `pwd` and `find . -maxdepth 4 -type d | sort`
-
-Add your screenshot here.
+![AWS Audit Initial Results](screenshots/01-aws-audit-initial-results.png)
 
 ---
 
-### Notes You Must Write (Very Important)
+### Screenshot 2 — Workspace Setup
 
-**1. Which resources from this week's earlier assignments did you see in the listings?**
+![AWS Audit Workspace Setup](screenshots/02-aws-audit-workspace-setup.png)
 
-Write your answer here.
+---
 
-**2. Why must you confirm your resources exist before writing an audit script against them?**
+## Notes
 
-Write your answer here.
+### 1. Which resources from this week's earlier assignments did you see in the listings?
+
+The AWS resource listings showed the S3 bucket, running EC2 instances, and the RDS database resources created during the earlier assignments. The RDS listing also showed the Book Review database and its read replica.
+
+### 2. Why must you confirm your resources exist before writing an audit script against them?
+
+Confirming the resources first ensures that the audit script targets real resources in the correct AWS account and region. It also prevents incorrect resource identifiers from being hard-coded into the script and makes the audit results more reliable.
 
 ---
 
@@ -50,25 +48,25 @@ Write your answer here.
 
 ## Goal
 
-Create a `CLAUDE.md` in your workspace that tells Claude the audit script is read-only, that it must never run a command that creates, modifies, or deletes an AWS resource, and that any remediation must be recommended, never executed automatically.
+Create a `CLAUDE.md` file that defines the audit as a read-only workflow and prevents Claude from automatically executing remediation commands.
 
-### Evidence
+## Evidence
 
-#### Screenshot 3 — `CLAUDE.md` open in VS Code showing all four sections
+### Screenshot 3 — CLAUDE.md Safety Rules
 
-Add your screenshot here.
+![CLAUDE.md Safety Rules](screenshots/03-claude-md-safety-rules.png)
 
 ---
 
-### Notes You Must Write (Very Important)
+## Notes
 
-**1. Why should Claude never be given permission to run `revoke-security-group-ingress` itself, even if the fix is obviously correct?**
+### 1. Why should Claude never be given permission to run `revoke-security-group-ingress` itself, even if the fix is obviously correct?
 
-Write your answer here.
+A security-group change can affect access to live AWS resources. A revoke command could remove legitimate access or cause service disruption if the wrong security group or rule is selected. Claude should therefore recommend the command and allow the human administrator to review and execute it manually.
 
-**2. Which rule prevents Claude from claiming a finding that the report does not support?**
+### 2. Which rule prevents Claude from claiming a finding that the report does not support?
 
-Write your answer here.
+The rule stating that Claude must not claim a finding unless the report contains supporting evidence prevents unsupported conclusions. Claude must base its findings on the evidence collected by the audit.
 
 ---
 
@@ -76,25 +74,25 @@ Write your answer here.
 
 ## Goal
 
-Ask Claude Code to propose a read-only audit plan covering five checks — S3 public-access settings, security groups open to the whole internet on SSH and MySQL ports, RDS public accessibility, and EBS volume encryption — without creating or editing any file yet.
+Use Claude Code to create a read-only audit plan covering five security checks.
 
-### Evidence
+## Evidence
 
-#### Screenshot 4 — Claude Code showing the five-check plan
+### Screenshot 4 — Five-Check Audit Plan
 
-Add your screenshot here.
+![Claude Code Five-Check Audit Plan](screenshots/04-aws-audit-five-check-plan.png)
 
 ---
 
-### Notes You Must Write (Very Important)
+## Notes
 
-**1. Which part of this task represents the Gather phase?**
+### 1. Which part of this task represents the Gather phase?
 
-Write your answer here.
+The Gather phase is the process of collecting information from AWS using read-only AWS CLI commands. The commands inspect S3 public-access settings, security-group rules, RDS accessibility, and EBS encryption status without changing any resources.
 
-**2. Did every proposed command start with `describe-`, `get-`, or `list-`? Why does that matter?**
+### 2. Did every proposed command start with `describe-`, `get-`, or `list-`? Why does that matter?
 
-Write your answer here.
+Yes. The proposed commands use read-only AWS CLI operations such as `describe-`, `get-`, and `list-`. This matters because these commands retrieve information without modifying AWS resources, keeping the audit safe and read-only.
 
 ---
 
@@ -102,43 +100,57 @@ Write your answer here.
 
 ## Goal
 
-Write a Bash script that runs the five checks from Task 3 using only read-only AWS CLI calls, writes a PASS/WARN/FAIL report to a file, and exits with a different code depending on the overall result.
+Create a Bash script that performs the five security checks, produces a report, and returns an exit code based on the audit result.
 
-Make it executable and confirm it has no syntax errors.
+## Evidence
 
-### Evidence
+### Screenshot 5 — Audit Script Variables and Checks Array
 
-#### Screenshot 5 — Top section of `aws-audit.sh` showing the variables and the checks array
-
-Add your screenshot here.
+![AWS Audit Script Variables](screenshots/05-aws-audit-script-top.png)
 
 ---
 
-#### Screenshot 6 — One check function (for example `check_ssh_open_to_world`) showing the AWS CLI call and conditional
+### Screenshot 6 — Audit Check Function
 
-Add your screenshot here.
-
----
-
-#### Screenshot 7 — Output of `bash -n scripts/aws-audit.sh` and `ls -l scripts/aws-audit.sh`
-
-Add your screenshot here.
+![AWS Audit Check Function](screenshots/06-aws-audit-check-function.png)
 
 ---
 
-### Notes You Must Write (Very Important)
+### Screenshot 7 — Script Syntax and Permissions
 
-**1. What is stored in the checks array, and how does the loop use it?**
+![AWS Audit Script Syntax Check](screenshots/07-aws-audit-script-syntax.png)
 
-Write your answer here.
+---
 
-**2. Why does every AWS CLI call in this script use `--query` and `--output text` instead of parsing raw JSON?**
+## Notes
 
-Write your answer here.
+### 1. What is stored in the checks array, and how does the loop use it?
 
-**3. Why does the script use different exit codes for HEALTHY, WARN, and FAIL?**
+The checks array stores the names of the five audit functions:
 
-Write your answer here.
+- `check_s3_public_access`
+- `check_ssh_open_to_world`
+- `check_mysql_open_to_world`
+- `check_rds_public_access`
+- `check_ebs_encryption`
+
+The script loops through the array and calls each function. This makes the audit organized and allows all checks to be executed using the same workflow.
+
+### 2. Why does every AWS CLI call in this script use `--query` and `--output text` instead of parsing raw JSON?
+
+`--query` extracts only the AWS information needed by each check, while `--output text` produces simple text that is easier for Bash to evaluate. This avoids unnecessary JSON parsing and makes the script easier to read and maintain.
+
+### 3. Why does the script use different exit codes for HEALTHY, WARN, and FAIL?
+
+Different exit codes allow other tools or automation systems to determine the audit result programmatically.
+
+For example:
+
+- `0` — HEALTHY / all checks passed
+- `1` — WARN / warnings were detected
+- `2` — FAIL / one or more security checks failed
+
+This makes the audit useful in automation and CI/CD workflows.
 
 ---
 
@@ -146,35 +158,44 @@ Write your answer here.
 
 ## Goal
 
-Run the script against your live AWS account and capture the current state before making any changes.
+Run the audit against the live AWS environment and record the baseline security state before remediation.
 
-### Evidence
+## Evidence
 
-#### Screenshot 8 — Output of `./scripts/aws-audit.sh` showing your Full Name and all five checks
+### Screenshot 8 — Baseline Audit Results
 
-Add your screenshot here.
-
----
-
-#### Screenshot 9 — Output showing the captured exit code and final summary
-
-Add your screenshot here.
+![AWS Baseline Audit Results](screenshots/08-aws-audit-baseline-results.png)
 
 ---
 
-### Notes You Must Write (Very Important)
+### Screenshot 9 — Captured Exit Code and Summary
 
-**1. What is the overall status of your baseline audit?**
+![AWS Audit Exit Code and Summary](screenshots/09-aws-audit-exit-code-summary.png)
 
-Write your answer here.
+---
 
-**2. Did any check return FAIL or WARN? If so, which one, and what evidence did it show?**
+## Notes
 
-Write your answer here.
+### 1. What is the overall status of your baseline audit?
 
-**3. If every check passed, what does that tell you about the security posture of your account so far?**
+The baseline audit returned a **WARN** status.
 
-Write your answer here.
+The audit completed successfully, but the results identified an EBS encryption warning that required attention.
+
+### 2. Did any check return FAIL or WARN? If so, which one, and what evidence did it show?
+
+The EBS encryption check returned a **WARN** result. The audit reported that three EBS volumes were not encrypted.
+
+The other checks passed, including:
+
+- S3 public-access protection
+- SSH access restriction
+- MySQL access restriction
+- RDS public accessibility
+
+### 3. If every check passed, what does that tell you about the security posture of your account so far?
+
+This question does not apply to my baseline result because the audit returned a warning. The results showed that most of the checked controls were passing, while the unencrypted EBS volumes remained an area requiring remediation.
 
 ---
 
@@ -182,35 +203,35 @@ Write your answer here.
 
 ## Goal
 
-Turn the script into a Claude Code skill named `/aws-audit` that runs the script, reads the report, and explains every finding along with its estimated cost or security risk — with tool access restricted so it can never modify your AWS account.
+Turn the script into a Claude Code skill named `/aws-audit` that runs the script, reads the report, and explains every finding along with its estimated cost or security risk — with tool access restricted so it can never modify the AWS account.
 
-### Evidence
+## Evidence
 
-#### Screenshot 10 — `SKILL.md` showing the frontmatter, tool restrictions, and safety rules
+### Screenshot 10 — SKILL.md
 
-Add your screenshot here.
-
----
-
-#### Screenshot 11 — `/aws-audit` output showing findings, cost/risk impact, and a recommended remediation command (or a clean report if your baseline passed everything)
-
-Add your screenshot here.
+![AWS Audit Skill](screenshots/10-aws-audit-skill.png)
 
 ---
 
-### Notes You Must Write (Very Important)
+### Screenshot 11 — /aws-audit Output
 
-**1. Why does this skill have Bash, Read, and Grep, but not Write?**
+![AWS Audit Skill Output](screenshots/11-aws-audit-skill-output.png)
 
-Write your answer here.
+---
 
-**2. What part is performed by Bash, and what part is performed by Claude?**
+## Notes
 
-Write your answer here.
+### 1. Why does this skill have Bash, Read, and Grep, but not Write?
 
-**3. Why is estimating cost/risk impact something the AI adds on top of a plain PASS/FAIL script?**
+The skill needs Bash to run the read-only audit script, Read to inspect the generated report, and Grep to search for specific findings. Write is excluded so that Claude cannot modify files or make changes to the AWS environment.
 
-Write your answer here.
+### 2. What part is performed by Bash, and what part is performed by Claude?
+
+Bash performs the actual read-only AWS resource checks and generates the audit report. Claude then reads and interprets the report, explains the findings, identifies the security or cost impact, and recommends remediation steps.
+
+### 3. Why is estimating cost/risk impact something the AI adds on top of a plain PASS/FAIL script?
+
+A Bash script can determine whether a technical condition passes or fails, but it does not necessarily explain the practical security or cost impact. Claude adds context by interpreting the findings and explaining why they matter and what remediation could be considered.
 
 ---
 
@@ -218,39 +239,45 @@ Write your answer here.
 
 ## Goal
 
-Pick one real finding from your baseline report (or deliberately open a security group rule if your baseline was fully clean), apply the fix yourself in a separate terminal — scoped to your own IP address, not the whole internet — then rerun the script to prove the finding is resolved.
+Pick one real finding from the baseline report, apply the fix yourself in a separate terminal, then rerun the script to prove the finding is resolved.
 
-### Evidence
+## Evidence
 
-#### Screenshot 12 — Output of the `revoke-security-group-ingress` and `authorize-security-group-ingress` commands you ran yourself
+### Screenshot 12 — Security Group Remediation
 
-Add your screenshot here.
-
----
-
-#### Screenshot 13 — Rerun of `./scripts/aws-audit.sh` showing the finding is now PASS
-
-Add your screenshot here.
+![SSH Security Group Remediation](screenshots/12-ssh-security-group-remediation.png)
 
 ---
 
-### Notes You Must Write (Very Important)
+### Screenshot 13 — Re-verified Audit
 
-**1. Which exact finding did you fix, and what command did you run?**
+![AWS Audit Final Results](screenshots/13-aws-audit-final-results.png)
 
-Write your answer here.
+---
 
-**2. Why did you scope the new rule to your own IP address instead of leaving it open to `0.0.0.0/0`?**
+## Notes
 
-Write your answer here.
+### 1. Which exact finding did you fix, and what command did you run?
 
-**3. Did Claude execute the remediation command, or did you? Why does that matter?**
+I fixed the security-group rule that allowed SSH access from the entire internet (`0.0.0.0/0`). I revoked the unrestricted SSH rule and authorized SSH access using my own IP address.
 
-Write your answer here.
+### 2. Why did you scope the new rule to your own IP address instead of leaving it open to `0.0.0.0/0`?
 
-**4. Which phase of the Agentic Loop does the Bash script represent? Which phase does Claude's explanation represent? Which phase is you running the fix?**
+Restricting SSH access to my own IP address reduces exposure to unauthorized access attempts from the public internet. It follows the principle of least privilege by allowing access only from the required source.
 
-Write your answer here.
+### 3. Did Claude execute the remediation command, or did you? Why does that matter?
+
+I executed the remediation command myself. This matters because the `/aws-audit` skill is designed to be read-only and should never make infrastructure changes automatically. Human review and approval are required before applying a remediation.
+
+### 4. Which phase of the Agentic Loop does the Bash script represent? Which phase does Claude's explanation represent? Which phase is you running the fix?
+
+The Bash audit script represents the **Gather** phase because it collects information from AWS.
+
+Claude's explanation represents the **Reason** phase because it interprets the evidence, identifies risks, and recommends remediation.
+
+Running the fix myself represents the **Act** phase because I manually apply the approved remediation.
+
+The second audit run represents the **Verify** phase because it confirms whether the finding has been resolved.
 
 ---
 
@@ -260,30 +287,30 @@ Write your answer here.
 
 Create a LinkedIn post including:
 
-- What you built: a read-only AWS audit script and a Claude Code `/aws-audit` skill
-- One real finding you caught and fixed in your own account
+- What I built: a read-only AWS audit script and a Claude Code `/aws-audit` skill
+- One real finding I caught and fixed in my own account
 - What the workflow demonstrated: evidence gathering, AI-assisted cost/risk analysis, human-approved remediation, and reverification
 - Screenshot of the finding before the fix
 - Screenshot of the same check passing after the fix
-- Write 4–6 lines in your own words
+- 4–6 lines written in my own words
 
-Suggested tags:
+### Suggested Tags
 
 `#DMIByPravinMishra #AWS #AgenticAI #ClaudeCode #DevOps`
 
-### Evidence
+## Evidence
 
-#### LinkedIn Post URL
+### LinkedIn Post URL
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/nji-ariane-ruth-494805172_dmibypravinmishra-aws-devops-activity-7506303089994563584-wA1N?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo
 
 ---
 
-#### Screenshot of Published LinkedIn Post
+### Screenshot of Published LinkedIn Post
 
-Add your screenshot here.
+![Published LinkedIn Post](screenshots/LinkedIn-post-ass7.png)
 
 ---
 
@@ -303,60 +330,36 @@ Your submission must include:
 - Your Full Name visible in the required outputs
 - LinkedIn post URL
 - Screenshot of the published LinkedIn post
-- GitHub repository URL (containing all assignment files)
+- GitHub repository URL
 
 ---
 
 # Completion Checklist
 
-- [ ] Task 1: AWS resources confirmed and workspace created (Screenshots 1–2)
-- [ ] Task 2: `CLAUDE.md` created with project context and safety rules (Screenshot 3)
-- [ ] Task 3: Claude produced a read-only five-check audit plan before any script existed (Screenshot 4)
-- [ ] Task 4: `aws-audit.sh` built, executable, and passes `bash -n` (Screenshots 5–7)
-- [ ] Task 5: Baseline audit captured and saved with Full Name visible (Screenshots 8–9)
-- [ ] Task 6: `/aws-audit` skill loads and runs successfully with no Write permission (Screenshots 10–11)
-- [ ] Task 7: A real finding was fixed by you and reverified as PASS (Screenshots 12–13)
-- [ ] Skill never executed a remediation command
-- [ ] New security group rule is scoped to your own IP, not `0.0.0.0/0`
-- [ ] All 13 required task screenshots are included
-- [ ] All "Notes You Must Write" questions are answered in your own words
-- [ ] No AWS credentials or unblurred account IDs exposed
-- [ ] LinkedIn post published and URL submitted
-- [ ] GitHub repository URL included in submission
-- [ ] All assignment files committed and visible in GitHub repository
+- [x] Task 1: AWS resources confirmed and workspace created (Screenshots 1–2)
+- [x] Task 2: `CLAUDE.md` created with project context and safety rules (Screenshot 3)
+- [x] Task 3: Claude produced a read-only five-check audit plan before any script existed (Screenshot 4)
+- [x] Task 4: `aws-audit.sh` built, executable, and passes `bash -n` (Screenshots 5–7)
+- [x] Task 5: Baseline audit captured and saved with Full Name visible (Screenshots 8–9)
+- [x] Task 6: `/aws-audit` skill loads and runs successfully with no Write permission (Screenshots 10–11)
+- [x] Task 7: A real finding was fixed by me and reverified as PASS (Screenshots 12–13)
+- [x] Skill never executed a remediation command
+- [x] New security group rule is scoped to my own IP, not `0.0.0.0/0`
+- [x] All 13 required task screenshots are included
+- [x] All "Notes You Must Write" questions are answered in my own words
+- [x] No AWS credentials or unblurred account IDs exposed
+- [x] LinkedIn post published and URL submitted
+- [x] GitHub repository URL included
+- [x] All assignment files committed and visible in GitHub
 
 ---
 
 # Final Submission
 
-Submit your GitHub repository URL containing all assignment files, screenshots, reports, and output.
+Submit the GitHub repository URL containing all assignment files, screenshots, reports, and output.
 
 ### GitHub Repository URL
 
 Paste your GitHub repository URL here:
 
 `Add your GitHub repository URL here`
-
----
-
-## 📌 About DMI & CloudAdvisory
-
-DevOps Micro Internship (DMI) is a project-based DevOps program run by Pravin Mishra (The CloudAdvisory) focused on real-world execution, systems thinking, and career readiness.
-
-It helps learners build strong DevOps foundations with hands-on experience.
-
----
-
-## 📌 Resources
-
-- 🌐 DMI Official Website: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 🎓 University: https://university.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 💬 Discord Community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 📝 Blog: https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme  
-- ▶️ YouTube Playlist: https://www.youtube.com/playlist?list=PLFeSNDtI4Cho  
-- 🔗 Pravin Mishra (LinkedIn): https://www.linkedin.com/in/pravin-mishra-aws-trainer/  
-- 🏢 CloudAdvisory (LinkedIn): https://www.linkedin.com/company/thecloudadvisory/
-
----
-
-*This submission is part of DevOps Micro Internship (DMI) — Agentic AI Track.*
