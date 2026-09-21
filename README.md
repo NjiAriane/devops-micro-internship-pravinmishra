@@ -133,7 +133,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | [Post](https://www.linkedin.com/posts/nji-ariane-ruth-494805172_devops-linux-bash-activity-7485082476235804673-igvk) | https://medium.com/@njiariana/building-an-ai-assisted-linux-incident-triage-workflow-with-bash-and-claude-code-395cf8a9a8de?sharedUserId=njiariana|
 | 04 | Git & GitHub | ✅ Completed | ✅ Solved | [Post](https://www.linkedin.com/posts/nji-ariane-ruth-494805172_devops-git-github-activity-7486566169047400450-JVY0?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkN5HAB_6uWL_--MIEwRhEZ_BLCaqDxIoo) | https://medium.com/@njiariana/building-an-ai-assisted-git-safety-net-combining-git-hooks-and-claude-code-for-safer-development-43c5d9532834?sharedUserId=njiariana|
 | 05 | DevOps Lifecycle & Agile | ✅ completed | ✅ solved |https://lnkd.in/p/d5tGy6GS | https://medium.com/@njiariana/building-an-ai-assisted-sprint-health-report-with-jira-mcp-and-claude-code-fc5551738460 |
-| 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | —|
+| 06 | AWS Cloud | ✅ completed | ✅ solved | https://lnkd.in/p/djHWkQFY | https://medium.com/@njiariana/week-6-aws-cloud-building-and-troubleshooting-a-production-style-three-tier-architecture-9983d8303c7f|
 | 07 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
 | 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
