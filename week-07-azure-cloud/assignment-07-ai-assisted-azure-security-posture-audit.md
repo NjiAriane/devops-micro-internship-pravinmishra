@@ -66,7 +66,7 @@ Write a Bash script that runs the four checks from Task 3 using read-only `az` c
 
 #### Screenshot 5 — Output of `bash -n` (no syntax errors) and `ls -l` showing the script is executable
 
-![Screenshot 5 — Script validation](screenshots/assignment-07-screenshot-05-validation.png).
+![Screenshot 5 — Script validation](screenshots/assignment-07-screenshot-05-validation.png)
 
 ---
 
@@ -94,12 +94,12 @@ Create a Claude Code skill restricted to read-only tools (no `Write`) that runs 
 
 #### Screenshot 7 — Your skill file's frontmatter showing `allowed-tools` without `Write`
 
-![Screenshot 8 — AI audit](screenshots/assignment-07-screenshot-08-ai-audit.png)
+![Screenshot 7 — Azure audit skill](screenshots/assignment-07-screenshot-07-azure-audit-skill.png)
 ---
 
 #### Screenshot 8 — `/azure-audit` output showing the baseline findings and Claude's explanation
 
-![Screenshot 9 — Original finding](screenshots/assignment-07-screenshot-09-original-finding.png)
+![Screenshot 8 — AI audit](screenshots/assignment-07-screenshot-08-ai-audit.png)
 ---
 
 # Task 7 — Fix a Real Finding and Re-Verify
@@ -124,7 +124,6 @@ Pick one WARN or FAIL finding (or deliberately open an NSG rule to port 22 from 
 #### Screenshot 11 — Second `/azure-audit` run (or report) showing the finding resolved
 
 ![Screenshot 11 — Resolved finding](screenshots/assignment-07-screenshot-11-resolved-finding.png)
-
 ---
 
 ### Notes
