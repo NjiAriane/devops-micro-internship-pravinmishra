@@ -122,7 +122,7 @@ Summarize what worked in the final deployment, the issues encountered and how ea
 
 **What worked:**
 
-Write your answer here.
+
 
 The Book Review application was successfully deployed on AWS using a three-tier architecture. The deployment separates the Web Tier, App Tier, and Database Tier within a custom VPC.
 
