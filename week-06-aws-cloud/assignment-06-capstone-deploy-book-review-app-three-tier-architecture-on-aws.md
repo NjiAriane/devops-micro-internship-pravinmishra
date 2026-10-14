@@ -123,7 +123,6 @@ Summarize what worked in the final deployment, the issues encountered and how ea
 **What worked:**
 
 
-
 The Book Review application was successfully deployed on AWS using a three-tier architecture. The deployment separates the Web Tier, App Tier, and Database Tier within a custom VPC.
 
 The Web Tier runs the Book Review frontend behind an internet-facing Application Load Balancer. The App Tier runs the backend on private EC2 instances behind an internal load balancer, while the MySQL database runs privately in Amazon RDS with a read replica.
