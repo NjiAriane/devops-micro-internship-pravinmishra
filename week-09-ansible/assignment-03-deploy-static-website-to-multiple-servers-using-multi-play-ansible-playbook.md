@@ -6,10 +6,12 @@ Part of the DevOps Micro Internship (DMI) with Agentic AI
 
 ## Student Details
 
-**Full Name:** Add your full name here  
+**Full Name:** Nji Menyonga Ariane Ruth
 **Cloud Platform Used:** AWS / Azure  
-**Server 1 URL:** `http://<SERVER_1_PUBLIC_IP>`  
-**Server 2 URL:** `http://<SERVER_2_PUBLIC_IP>`
+**Server 1 URL:** http://98.93.215.207 
+**Server 2 URL:** http://3.84.186.75
+
+
 
 ---
 
@@ -31,7 +33,7 @@ Create the required folders and files for the Ansible project.
 
 ### Screenshot 1 — Terminal or VS Code showing the complete `static-web` project structure
 
-Add your screenshot here.
+![Project Structure](screenshots/A3-Screenshot-01-Static-Web-Project-Structure.png)
 
 ---
 
@@ -45,7 +47,7 @@ Add both Ubuntu servers to the Ansible inventory.
 
 ### Screenshot 2 — Output of `ansible-inventory -i inventory.ini --graph` showing `web1` and `web2`
 
-Add your screenshot here.
+![Inventory Graph](screenshots/A3-Screenshot-02-Ansible-Inventory-Graph.png)
 
 ---
 
@@ -54,7 +56,14 @@ Add your screenshot here.
 Copy and paste the complete contents of your `inventory.ini` file below:
 
 ```ini
-Add your inventory.ini content here.
+[web]
+web1 ansible_host=98.93.215.207
+web2 ansible_host=3.84.186.75
+
+[web:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=~/.ssh/id_ed25519
+ansible_ssh_common_args=-o StrictHostKeyChecking=no
 ```
 
 ---
@@ -69,7 +78,7 @@ Confirm that the Ansible controller can connect to both servers.
 
 ### Screenshot 3 — Ansible ping output showing `SUCCESS` and `pong` for both servers
 
-Add your screenshot here.
+![Ansible Ping Success](screenshots/A3-Screenshot-03-Ansible-Ping-Success.png)
 
 ---
 
@@ -83,7 +92,7 @@ Download `index.html` to the Ansible controller and personalize the website with
 
 ### Screenshot 4 — Edited `files/index.html` showing the footer line with your full name
 
-Add your screenshot here.
+![Personalized Index HTML](screenshots/A3-Screenshot-04-Personalized-Index-HTML.png)
 
 ---
 
@@ -98,7 +107,66 @@ Create a single Ansible playbook containing separate plays for installation, dep
 Copy and paste the complete contents of your `site.yml` file below:
 
 ```yaml
-Add your site.yml content here.
+site.yml
+---
+- name: Install and configure Nginx
+  hosts: web
+  become: true
+  tasks:
+    - name: Update the APT package cache
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Install Nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+
+    - name: Start and enable Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+
+- name: Deploy the static website
+  hosts: web
+  become: true
+  tasks:
+    - name: Copy index.html to the web root
+      ansible.builtin.copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: "0644"
+      notify: Reload nginx
+
+  handlers:
+    - name: Reload nginx
+      ansible.builtin.service:
+        name: nginx
+        state: reloaded
+
+- name: Verify both websites from the controller
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  become: false
+  tasks:
+    - name: Send an HTTP GET request to each web server
+      ansible.builtin.uri:
+        url: "http://{{ hostvars[item].ansible_host }}"
+        status_code: 200
+      loop: "{{ groups['web'] }}"
+      register: website_checks
+
+    - name: Confirm each server returned HTTP 200
+      ansible.builtin.assert:
+        that:
+          - item.status == 200
+        success_msg: "{{ item.item }} returned HTTP {{ item.status }}"
+      loop: "{{ website_checks.results }}"
 ```
 
 ---
@@ -113,7 +181,7 @@ Check the playbook for YAML or Ansible syntax errors before running it.
 
 ### Screenshot 5 — Successful syntax-check output showing `playbook: site.yml`
 
-Add your screenshot here.
+![Playbook Syntax Check](screenshots/A3-Screenshot-05-Playbook-Syntax-Check.png)
 
 ---
 
@@ -127,13 +195,13 @@ Install Nginx, deploy the website, and verify both servers in one playbook run.
 
 ### Screenshot 6 — Play 3 verification showing HTTP `200` for both servers
 
-Add your screenshot here.
+![Playbook HTTP 200 Verification](screenshots/A3-Screenshot-06-Playbook-HTTP-200-Verification.png)
 
 ---
 
 ### Screenshot 7 — Final play recap showing `unreachable=0` and `failed=0` for `web1`, `web2`, and `localhost`
 
-Add your screenshot here.
+![First Run Play Recap](screenshots/A3-Screenshot-07-First-Run-Play-Recap.png)
 
 ---
 
@@ -147,7 +215,7 @@ Run the playbook again and confirm that it does not make unnecessary changes.
 
 ### Screenshot 8 — Second playbook run showing the play recap with `changed=0`, `unreachable=0`, and `failed=0` for both web servers
 
-Add your screenshot here.
+![Idempotency Second Run](screenshots/A3-Screenshot-08-Idempotency-Second-Run.png)
 
 ---
 
@@ -161,19 +229,19 @@ Confirm that the static website is accessible from both public IP addresses.
 
 ### Screenshot 9 — `curl -I` output showing HTTP `200 OK` from both servers
 
-Add your screenshot here.
+![Curl HTTP 200 Both Servers](screenshots/A3-Screenshot-09-Curl-HTTP-200-Both-Servers.png)
 
 ---
 
 ### Screenshot 10 — Browser showing the website from Server 1 with the public IP and your full name visible
 
-Add your screenshot here.
+![Website Server 1](screenshots/A3-Screenshot-10-Website-Server-1.png)
 
 ---
 
 ### Screenshot 11 — Browser showing the website from Server 2 with the public IP and your full name visible
 
-Add your screenshot here.
+![Website Server 2](screenshots/A3-Screenshot-11-Website-Server-2.png)
 
 ---
 
@@ -182,8 +250,8 @@ Add your screenshot here.
 Add both deployed website URLs below:
 
 ```text
-Server 1: http://<SERVER_1_PUBLIC_IP>
-Server 2: http://<SERVER_2_PUBLIC_IP>
+Server 1: http://98.93.215.207
+Server 2: http://3.84.186.75
 ```
 
 ---
@@ -199,7 +267,32 @@ Document how the project works and record what you learned.
 Copy and paste the complete contents of your `README.md` file below:
 
 ```markdown
-Add your README.md content here.
+# Multi-Play Ansible Static Website Deployment
+
+## Project Overview
+This project automates the provisioning, deployment, and health verification of a static marketing website across a multi-node Ubuntu server fleet on AWS using a multi-play Ansible playbook.
+
+## Environment
+- Cloud platform: AWS (EC2)
+- Operating system: Ubuntu 22.04 LTS
+- Number of managed servers: 2 (web1, web2)
+- Web server: Nginx
+
+## How to Run the Playbook
+Ensure your Python virtual environment is activated and execute:
+```bash
+ansible-playbook -i inventory.ini site.yml                                                                                                                                                                                  Issue Faced and Solution
+During repeated playbook executions, refreshing the APT package cache unnecessarily triggered change events. I configured cache_valid_time: 3600 on the ansible.builtin.apt task, ensuring the package repository index is only polled if the local cache is older than one hour, achieving true changed=0 idempotency on subsequent runs.
+
+What I Learned
+I learned how to divide an end-to-end automation workflow into logically distinct plays (infrastructure configuration, content deployment, and client verification). I also learned how to use event-driven handlers (notify) so services only reload when managed files change.
+
+Why Installation and Deployment Are Separate
+Separating installation from deployment decouples system-level dependencies from application release lifecycles. Base server configuration changes infrequently, whereas application artifacts update continuously. Dividing them into separate plays improves readability, limits the blast radius of changes, and simplifies maintenance.
+
+Benefit of the Ansible Copy Module
+The ansible.builtin.copy module allows the controller to act as the single source of truth for deployment artifacts without requiring Git credentials or deployment keys to be placed on production nodes. Additionally, it computes cryptographic checksums so that file transfers and notifications occur only when source content actually differs.
+
 ```
 
 ---
@@ -212,14 +305,13 @@ Add your README.md content here.
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://lnkd.in/p/dsviaUvY
 
 ---
 
 ### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
-
+![LinkedIn Post Published](screenshots/A3-Screenshot-12-LinkedIn-Post-Published.png)
 ---
 
 # Assignment Questions
@@ -228,48 +320,49 @@ Answer the following in your own words:
 
 **1. What issue did you face while completing this assignment, and how did you fix it?**
 
-Add your answer here.
+One challenge I faced was ensuring that Ansible could connect to both Ubuntu web servers and deploy the website successfully. I resolved this by checking my inventory configuration, verifying SSH connectivity, testing Ansible ping responses, and using HTTP checks to confirm that the websites were accessible.
+
 
 ---
 
 **2. What did you learn from this assignment?**
 
-Add your answer here.
+I learned how to use a multi-play Ansible playbook to install and configure Nginx, deploy a personalized static website to multiple servers, manage service reloads with handlers, and verify website availability using Ansible's `uri` module and `curl`.
+
 
 ---
 
 **3. Why is it useful to split installation, deployment, and verification into separate plays?**
 
-Add your answer here.
+Separating these tasks makes the playbook easier to read, maintain, and troubleshoot. Each play has a specific responsibility, making it easier to identify errors and manage the deployment process.
 
 ---
 
 **4. What is one benefit of using the Ansible `copy` module instead of cloning the website directly from Git on every managed server?**
 
-Add your answer here.
+The `copy` module allows me to manage the website files centrally on the Ansible controller and distribute them consistently to all managed servers. This avoids the need to install Git or clone the repository separately on each server.
 
 ---
 
 **5. What does idempotency mean in this assignment?**
 
-Add your answer here.
+Idempotency means that running the playbook multiple times produces the same desired state without making unnecessary changes. When the website and server configuration are already correct, a second run should report `changed=0` for the web servers.
 
 ---
 
 **6. What does the Ansible `uri` module verify in Play 3?**
 
-Add your answer here.
-
+The `uri` module sends HTTP requests to both web servers and checks their response status codes. In this assignment, it verifies that both websites return HTTP status code `200`, confirming that they are accessible over HTTP.
 ---
 
 # Required Files
 
 Confirm that the following files are included in your assignment folder:
 
-- [ ] `inventory.ini`
-- [ ] `site.yml`
-- [ ] `files/index.html`
-- [ ] `README.md`
+- [x] `inventory.ini`
+- [x] `site.yml`
+- [x] `files/index.html`
+- [x] `README.md`
 
 ---
 
@@ -287,33 +380,33 @@ Confirm that the following files are included in your assignment folder:
 
 # Completion Checklist
 
-- [ ] Task 1: `static-web` folder structure is complete
-- [ ] Task 2: Both servers are listed under the `[web]` group in `inventory.ini`
-- [ ] Task 2: Inventory graph shows `web1` and `web2`
-- [ ] Task 3: Ansible ping returns `SUCCESS` and `pong` for both servers
-- [ ] Task 4: `files/index.html` contains your full name
-- [ ] Task 5: `site.yml` contains three separate plays
-- [ ] Task 5: Play 1 installs, starts, and enables Nginx
-- [ ] Task 5: Play 2 deploys `index.html` using the `copy` module
-- [ ] Task 5: Nginx reload handler is included
-- [ ] Task 5: Play 3 verifies both web servers from the controller
-- [ ] Task 6: Playbook syntax check passes
-- [ ] Task 7: First playbook run completes with `unreachable=0` and `failed=0`
-- [ ] Task 7: URI verification returns HTTP `200` for both servers
-- [ ] Task 8: Second playbook run demonstrates idempotency
-- [ ] Task 8: Second run shows `changed=0` for both web servers
-- [ ] Task 9: Both `curl -I` commands return HTTP `200 OK`
-- [ ] Task 9: Website loads from Server 1
-- [ ] Task 9: Website loads from Server 2
-- [ ] Task 9: Full name is visible on both deployed websites
-- [ ] Task 10: `README.md` contains all required explanations
-- [ ] Screenshots 1–11 are included
-- [ ] `inventory.ini`, `site.yml`, and `README.md` are pasted as editable text
-- [ ] Both website URLs are included
-- [ ] Assignment questions are answered
-- [ ] LinkedIn post published
-- [ ] LinkedIn post URL added
-- [ ] No sensitive information is exposed
+- [x] Task 1: `static-web` folder structure is complete
+- [x] Task 2: Both servers are listed under the `[web]` group in `inventory.ini`
+- [x] Task 2: Inventory graph shows `web1` and `web2`
+- [x] Task 3: Ansible ping returns `SUCCESS` and `pong` for both servers
+- [x] Task 4: `files/index.html` contains your full name
+- [x] Task 5: `site.yml` contains three separate plays
+- [x] Task 5: Play 1 installs, starts, and enables Nginx
+- [x] Task 5: Play 2 deploys `index.html` using the `copy` module
+- [x] Task 5: Nginx reload handler is included
+- [x] Task 5: Play 3 verifies both web servers from the controller
+- [x] Task 6: Playbook syntax check passes
+- [x] Task 7: First playbook run completes with `unreachable=0` and `failed=0`
+- [x] Task 7: URI verification returns HTTP `200` for both servers
+- [x] Task 8: Second playbook run demonstrates idempotency
+- [x] Task 8: Second run shows `changed=0` for both web servers
+- [x] Task 9: Both `curl -I` commands return HTTP `200 OK`
+- [x] Task 9: Website loads from Server 1
+- [x] Task 9: Website loads from Server 2
+- [x] Task 9: Full name is visible on both deployed websites
+- [x] Task 10: `README.md` contains all required explanations
+- [x] Screenshots 1–11 are included
+- [x] `inventory.ini`, `site.yml`, and `README.md` are pasted as editable text
+- [x] Both website URLs are included
+- [x] Assignment questions are answered
+- [x] LinkedIn post published
+- [x] LinkedIn post URL added
+- [x] No sensitive information is exposed
 
 ---
 
