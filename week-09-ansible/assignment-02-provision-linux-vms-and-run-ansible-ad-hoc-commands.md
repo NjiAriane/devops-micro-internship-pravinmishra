@@ -101,7 +101,6 @@ Initialize and validate the Terraform configuration, review the execution plan, 
 
 #### Screenshot 8 — Azure Portal or AWS Management Console showing all three or four VMs in the `Running` state, with their role-based names visible
 
-Add your screenshot here.
 
 ![Screenshot 08](screenshots/A2-Screenshot-08-Cloud-VMs-Running.png)
 
