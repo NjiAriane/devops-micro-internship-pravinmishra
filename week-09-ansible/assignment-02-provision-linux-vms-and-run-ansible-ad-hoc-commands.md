@@ -36,7 +36,6 @@ This project will use the Git repository and Ansible controller prepared in Assi
 
 ### Notes
 
-Add your task notes here.
 
 ---
 
@@ -75,7 +74,6 @@ Do not configure both providers for this assignment.
 
 ### Notes
 
-Add your task notes here.
 
 ---
 
@@ -106,7 +104,6 @@ Initialize and validate the Terraform configuration, review the execution plan, 
 
 ### Notes
 
-Add your task notes here.
 
 ---
 
@@ -126,7 +123,6 @@ Verify that each managed VM can be accessed from the Ansible controller using SS
 
 ### Notes
 
-Add your task notes here.
 
 ---
 
@@ -154,7 +150,6 @@ The inventory allows Ansible to run commands against all servers, or only specif
 
 ### Notes
 
-Add your task notes here.
 
 ---
 
@@ -206,7 +201,6 @@ This task proves that the inventory is working and that Ansible can control mult
 
 ### Notes
 
-Add your task notes here.
 
 ---
 
