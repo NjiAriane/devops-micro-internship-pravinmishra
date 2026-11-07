@@ -91,7 +91,7 @@ This is not a course. It is an internship-style program — real deployments, re
 [![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/)
 
 <!-- Week 09 → Ansible -->
-<!-- [![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/) -->
+ [![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/) 
 
 <!-- Week 10 → Azure DevOps CI/CD -->
 <!-- [![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/) -->
@@ -136,7 +136,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 06 | AWS Cloud | ✅ completed | ✅ solved | https://lnkd.in/p/djHWkQFY | https://medium.com/@njiariana/week-6-aws-cloud-building-and-troubleshooting-a-production-style-three-tier-architecture-9983d8303c7f|
 | 07 | Azure Cloud | ✅ Completed| ✅ solved | https://lnkd.in/p/d-8NmHZd | https://medium.com/@njiariana/week-7-azure-cloud-building-securing-and-auditing-cloud-infrastructure-1e90befc9200|
 | 08 | Terraform | ✅ completed | ✅ solved | https://lnkd.in/p/dt_f4iNH| https://medium.com/@njiariana/using-agentic-ai-to-make-terraform-changes-safer-and-smarter-ec7cda425afc|
-| 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
+| 09 | Ansible | ✅ completed | ✅ completed | https://lnkd.in/p/dwv-J6SM | https://medium.com/@njiariana/week-9-of-my-devops-micro-internship-ansible-automation-in-action-6d67aabdddf8|
 | 10 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
 | 11 | Docker | ⬜ Not Started | ⏳ Pending | — | — |
 | 12 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |
