@@ -37,13 +37,14 @@ Add a screenshot of Azure Repos showing:
 * `main` branch
 * Project files
 
-Add your screenshot here.
+![Screenshot 1 — React Project in Azure Repos](screenshots/A3-S01-React-Project-Azure-Repos.png)
 
 ---
 
 # Task 2 — Provision and Configure the Target VM
 
 ## Goal
+
 
 Provision an Ubuntu VM using Terraform and configure Nginx, React SPA routing, SSH access, and deployment permissions using Ansible.
 
@@ -81,7 +82,7 @@ Add a screenshot of the Azure Pipeline YAML open in the editor showing:
 * Publish stage
 * Deploy stage
 
-Add your screenshot here.
+![Screenshot 2 — Multi-Stage Pipeline YAML](screenshots/A3-S02-Multi-Stage-Pipeline-YAML.png)
 
 > Do not expose passwords, private keys, tokens, or cloud credentials.
 
@@ -104,7 +105,7 @@ Add a screenshot of one Azure DevOps pipeline run showing all four stages succee
 * Publish
 * Deploy
 
-Add your screenshot here.
+![Screenshot 3 — Successful Pipeline Run](screenshots/A3-S03-Successful-Pipeline-Run.png)
 
 ---
 
@@ -122,7 +123,7 @@ Add a screenshot of the pipeline SSH verification log or VM terminal showing the
 
 `/var/www/html`
 
-Add your screenshot here.
+![Screenshot 4 — Nginx Web Root Verification](screenshots/A3-S04-Nginx-Web-Root-Verification.png)
 
 ---
 
@@ -143,11 +144,11 @@ Add a browser screenshot showing:
 * Your Full Name
 * Deployment date
 
-Add your screenshot here.
+![Screenshot 5 — Deployed React Application](screenshots/A3-S05-Deployed-React-Application.png)
 
 ## Final Application URL
 
-`http://<vm-public-ip>`
+`http://44.203.234.84`
 
 Replace the placeholder and paste your final application URL below:
 
@@ -159,7 +160,9 @@ Replace the placeholder and paste your final application URL below:
 
 Write a short explanation of the CI/CD workflow you created.
 
-[Write your summary here.]
+I created a CI/CD workflow using Azure Repos and Azure Pipelines to automate the testing, building, and deployment of my React application. Each commit to the main branch triggers the pipeline, which runs on a self-hosted agent installed on an Ubuntu EC2 instance provisioned with Terraform. The pipeline sets up Node.js, installs dependencies, runs automated tests, and generates a production build. It then copies the build files over SSH to /var/www/html, validates the Nginx configuration, and reloads Nginx to serve the updated application. This workflow ensures that application changes are tested before deployment and reduces manual deployment work.
+
+
 
 ---
 
@@ -174,8 +177,7 @@ Add a screenshot of your LinkedIn post showing:
 * Post text
 * At least one image or link
 
-Add your screenshot here.
-
+![Screenshot 6 — LinkedIn Post](screenshots/A3-S06-LinkedIn-Post.png)
 ## LinkedIn Post URL
 
 [Paste your public LinkedIn post URL here.]
@@ -199,27 +201,27 @@ Add your screenshot here.
 
 # Completion Checklist
 
-* [ ] All tasks were completed in sequence
-* [ ] The correct React repository was imported into Azure Repos
-* [ ] Your Full Name and date were added to the application
-* [ ] The pipeline YAML was authored and committed to the repository
-* [ ] Commits to `main` trigger the pipeline automatically
-* [ ] The pipeline contains Build, Test, Publish, and Deploy stages
-* [ ] All four stages succeeded in the same pipeline run
-* [ ] The production build moved between stages as a pipeline artifact
-* [ ] The Deploy stage used the SSH Service Connection
-* [ ] No password or secret is stored in the YAML
-* [ ] `index.html` is directly inside `/var/www/html`
-* [ ] Raw React source code was not deployed to the Nginx web root
-* [ ] `node_modules/` was not deployed to the Nginx web root
-* [ ] Nginx is active
-* [ ] The application opens through the VM public IP address
-* [ ] Your Full Name and date are visible in the browser screenshot
-* [ ] Screenshots 1–6 are included and readable
-* [ ] No password, token, private key, account ID, or other secret is visible
-* [ ] The final application URL is included
-* [ ] The LinkedIn post is published
-* [ ] The LinkedIn post URL is included
+* [x] All tasks were completed in sequence
+* [x] The correct React repository was imported into Azure Repos
+* [x] Your Full Name and date were added to the application
+* [x] The pipeline YAML was authored and committed to the repository
+* [x] Commits to `main` trigger the pipeline automatically
+* [x] The pipeline contains Build, Test, Publish, and Deploy stages
+* [x] All four stages succeeded in the same pipeline run
+* [x] The production build moved between stages as a pipeline artifact
+* [x] The Deploy stage used the SSH Service Connection
+* [x] No password or secret is stored in the YAML
+* [x] `index.html` is directly inside `/var/www/html`
+* [x] Raw React source code was not deployed to the Nginx web root
+* [x] `node_modules/` was not deployed to the Nginx web root
+* [x] Nginx is active
+* [x] The application opens through the VM public IP address
+* [x] Your Full Name and date are visible in the browser screenshot
+* [x] Screenshots 1–6 are included and readable
+* [x] No password, token, private key, account ID, or other secret is visible
+* [x] The final application URL is included
+* [x] The LinkedIn post is published
+* [x] The LinkedIn post URL is included
 
 ---
 
